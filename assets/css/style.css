@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Lato:wght@300&family=Oswald:wght@300&family=Roboto+Condensed:wght@300&display=swap');
+* { /*remove browser defualt settings*/
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
 body{
-    background-color: blue;
+    background-color: #000080;
+    font-family: 'Architects Daughter', cursive;
+    color: #f4f4f4;
+    
 }
