@@ -5,26 +5,52 @@
     border: none;
     box-sizing: border-box;
 }
-
+/*style the whole page*/
 body{
     background-color: #000080;
     font-family: 'Architects Daughter', cursive;
     color: #f4f4f4;
     
 }
+#intro-heading{
+    text-align: center;
+}
+/*style the quiz container*/
 #quiz-form{
     display: none;
 }
+
 #flex-container-1{
     display: flex;
+   
     justify-content: center;
     margin-top: 5%;
 }
+/*style and posistion inputfield and playbutton inside the flex container*/
 #inner-flex-1{
     display: flex;
+    border-radius: 10%;
     width: 40%;
     height: 450px;
     background-color: orange;
     align-items: center;
     justify-content: space-around;
 }
+
+#play-btn{
+    background-color: #000080;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.input-name{
+    width: 20%;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+}
+
+
