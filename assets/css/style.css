@@ -12,3 +12,19 @@ body{
     color: #f4f4f4;
     
 }
+#quiz-form{
+    display: none;
+}
+#flex-container-1{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+#inner-flex-1{
+    display: flex;
+    width: 40%;
+    height: 450px;
+    background-color: orange;
+    align-items: center;
+    justify-content: space-around;
+}

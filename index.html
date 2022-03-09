@@ -11,22 +11,31 @@
 
 <body><!-- header starts-->
     <header id="intro-heading"> <h2> Welcome to my quizgame</h2> </header>
-
-    <form id="quiz-form">
+<!-- quiz-->
+    <form id="quiz-form" name="quiz">
         <p> Who is the president of USA?</p> 
-        <input type="radio" id="question-1" value="Barack Obama" name="1"> Obama<br>
-        <input type="radio" id="question-1" value="Donald Trump" name="1"> Trump
+        <input type="radio" id="question-1" value="Barack Obama" name="question1"> Barack Obama<br>
+        <input type="radio" id="question-1" value="Donald Trump" name="question1"> Donald Trump
 
         <p> What is 2+2</p>
-        <input type="radio" id="question-2" value="10" name="2"> 10<br>
-        <input type="radio" id="question-2" value="3" name="2"> 3
+        <input type="radio" id="question-2" value="4" name="question2"> 4<br>
+        <input type="radio" id="question-2" value="3" name="question2"> 3
 
         <p> What is the biggest country in the world?</p>
-        <input type="radio" id="question-2" value="China" name="3"> China<br>
-        <input type="radio" id="question-2" value="Russia" name="3"> Russia
+        <input type="radio" id="question-3" value="China" name="question3"> China<br>
+        <input type="radio" id="question-3" value="Russia" name="question3"> Russia
+        <button id="submit-btn" type="button" onclick= "checkAnswer();">Click here </button>
 
     </form>
-
+    <!-- flexcontainer-->
+<div id="flex-container-1">
+    
+    <div id="inner-flex-1">
+        <input type="text" class="input-name" placeholder="Username">
+    <button id="play-btn"> Click to play</button>
+</div>
+</div>
+<p id="correct-answer"> score</p>
 </body>
 <script src="assets/javascript/script.js"></script>
 </html>
