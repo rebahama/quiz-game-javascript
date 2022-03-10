@@ -14,36 +14,36 @@
     <!-- header starts-->
     <header id="intro-heading">
         <h2 id="intro-text">Welcome write your username and press play to begin</h2>
+        
     </header>
+
     <!-- quiz not displayed until play-btn is clicked-->
-    
     <form id="quiz-form" name="quiz">
         <p> Who is the president of USA?</p>
         <input type="radio" id="question-1" value="Barack Obama" name="question1"> Barack Obama<br>
         <input type="radio" id="question-1" value="Donald Trump" name="question1"> Donald Trump
 
-        <p> What is 2+2</p>
+        <p> What is 2+2</p> 
         <input type="radio" id="question-2" value="4" name="question2"> 4<br>
         <input type="radio" id="question-2" value="3" name="question2"> 3
-
+        
         <p> What is the biggest country in the world?</p>
         <input type="radio" id="question-3" value="China" name="question3"> China<br>
         <input type="radio" id="question-3" value="Russia" name="question3"> Russia
         <button id="submit-btn" type="button" onclick="checkAnswer();">Click here </button>
+        <p id="user-name"> score</p>
     </form>
 
     <!-- flexcontainer for username input and play button-->
-    
     <div id="flex-container-1">
-       
-
         <div id="inner-flex-1">
             
-            <input type="text" class="input-name" placeholder="Username">
+            <input type="text" id="input-name" placeholder="Username">
             <button id="play-btn"> Click to play</button>
         </div>
     </div>
-    <p id="correct-answer"> score</p>
+    
+    
 </body>
 <script src="assets/javascript/script.js"></script>
 

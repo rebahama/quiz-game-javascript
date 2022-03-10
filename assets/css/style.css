@@ -47,7 +47,7 @@ body{
     cursor: pointer;
 }
 
-.input-name{
+#input-name{
     width: 20%;
     padding: 12px 20px;
     border: 1px solid #ccc;
