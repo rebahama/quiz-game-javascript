@@ -13,9 +13,10 @@
 <body>
     <!-- header starts-->
     <header id="intro-heading">
-        <h2> Welcome to my quizgame</h2>
+        <h2 id="intro-text">Welcome write your username and press play to begin</h2>
     </header>
     <!-- quiz not displayed until play-btn is clicked-->
+    
     <form id="quiz-form" name="quiz">
         <p> Who is the president of USA?</p>
         <input type="radio" id="question-1" value="Barack Obama" name="question1"> Barack Obama<br>
@@ -30,10 +31,11 @@
         <input type="radio" id="question-3" value="Russia" name="question3"> Russia
         <button id="submit-btn" type="button" onclick="checkAnswer();">Click here </button>
     </form>
+
     <!-- flexcontainer for username input and play button-->
     
     <div id="flex-container-1">
-        <h2 id="intro-text">Pleaste write your username and press play to begin</h2>
+       
 
         <div id="inner-flex-1">
             
