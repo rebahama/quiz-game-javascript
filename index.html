@@ -17,48 +17,74 @@
     </header>
     <!-- quiz not displayed until play-btn is clicked-->
     <form id="quiz-form" name="quiz">
-         
+
         <div id="next-area-1">
-        <p> 1.Who is the president of USA?</p>
-        <label class="radio-container">Barack Obama
-        <input type="radio" id="question-1" value="Barack Obama" name="question1">  
-        </label>
-        <label class="radio-container">Donald Trump
-        <input type="radio" id="question-1" value="Donald Trump" name="question1">  
-        </label>
-        <p> 2.What is 2+2</p>
-        <label class="radio-container">4
-        <input type="radio" id="question-2" value="4" name="question2">
-        </label>
-        <label class="radio-container">3
-        <input type="radio" id="question-2" value="3" name="question2"> 
-        </label>
-        <p> 3.What is the biggest country in the world?</p>
-        <label class="radio-container"> China
-        <input type="radio" id="question-3" value="China" name="question3"> 
-        </label>
-        <label class="radio-container"> Russia
-        <input type="radio" id="question-3" value="Russia" name="question3">
-        </label>
-  
-    </div> 
-    <!-- only shown when clicking the next button-->
-        <div id="next-area-2">
-            <p> 4.What is the biggest lake?</p>
-        <label class="radio-container"> Atlantic ocean
-        <input type="radio" id="question-4" value="Atlantic ocean" name="question4"> 
-        </label>
-        <label class="radio-container"> nordic sea
-            <input type="radio" id="question-4" value="Nordic sea" name="question4"> 
+            <p> 1.Who is the president of USA?</p>
+            <label class="radio-container">Joe Biden
+                <input type="radio" id="question-1" value="Barack Obama" name="question1">
             </label>
-            
+            <label class="radio-container">Donald Trump
+                <input type="radio" id="question-1" value="Donald Trump" name="question1">
+            </label>
+            <p> 2.What is 3 + 3 x 4?</p>
+            <label class="radio-container">15
+                <input type="radio" id="question-2" value="4" name="question2">
+            </label>
+            <label class="radio-container">45
+                <input type="radio" id="question-2" value="3" name="question2">
+            </label>
+            <p> 3.What is the biggest country in the world?</p>
+            <label class="radio-container"> China
+                <input type="radio" id="question-3" value="China" name="question3">
+            </label>
+            <label class="radio-container"> Russia
+                <input type="radio" id="question-3" value="Russia" name="question3">
+            </label>
+
+        </div>
+        <!-- area 2 only shown when clicking the next button-->
+        <div id="next-area-2">
+            <p> 4.What is the name of the biggest lake in the world?</p>
+            <label class="radio-container"> Caspian Sea
+                <input type="radio" id="question-4" value="Caspian Sea" name="question4">
+            </label>
+            <label class="radio-container"> Baikal Lake
+                <input type="radio" id="question-4" value="Baikal Lake" name="question4">
+            </label>
+            <p> 5.When did world war 1 start?</p>
+            <label class="radio-container"> 1919
+                <input type="radio" id="question-5" value="1919" name="question5">
+            </label>
+            <label class="radio-container"> 1914
+                <input type="radio" id="question-5" value="1914" name="question5">
+            </label>
+            <p> 6.Who is the richest person in the world?</p>
+            <label class="radio-container"> Jeff Bezos
+                <input type="radio" id="question-6" value="Jeff Bezos" name="question6">
+            </label>
+            <label class="radio-container"> Elon Musk
+                <input type="radio" id="question-6" value="Elon Musk" name="question6">
+            </label>
+        </div>
+
+        <!-- area 3 shown when clickin next button from area2-->
+        <div id="next-area-3">
+            <p> 4.What is the name of the biggest lake in the world?</p>
+            <label class="radio-container"> Caspian Sea
+                <input type="radio" id="question-4" value="Caspian Sea" name="question4">
+            </label>
+            <label class="radio-container"> Baikal Lake
+                <input type="radio" id="question-4" value="Baikal Lake" name="question4">
+            </label>
+
+
         </div>
         <!-- next and previous buttons-->
         <button id="previous-area-btn" type="button">previous</button>
         <button id="next-area-btn" type="button">Next</button>
         <button id="submit-btn" type="button" onclick="answerScore();"> Submit quiz </button>
-        
-                <p id="user-name"> score</p>
+
+        <p id="user-name"> score</p>
     </form>
 
     <!-- flexcontainer for username input and play button-->

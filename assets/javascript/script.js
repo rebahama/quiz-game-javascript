@@ -1,4 +1,4 @@
-//variabels to acess the id in the html file.
+//variabels to access the id in the html file.
 let  showQuiz=document.getElementById('quiz-form');
 let  showPlay=document.getElementById('play-btn');
 let  showFlex=document.getElementById('flex-container-1');
@@ -6,6 +6,7 @@ let  nextButton=document.getElementById('next-area-btn');
 let  previousButton=document.getElementById('previous-area-btn')
 let  firstArea=document.getElementById('next-area-1')
 let  secondArea=document.getElementById('next-area-2');
+let  thirdArea=document.getElementById('next-area-3')
 
 const  answerArray=["Barack Obama", "4","Nordic sea"] 
 // display the id when clicking the variabe and hideing the div.
@@ -63,12 +64,13 @@ nextButton.addEventListener('click', function nextSection() {
     
    firstArea.style.display="none"
    secondArea.style.display="block";
-
-
+   
 })
 
 //function for when clicking the previous button
 previousButton.addEventListener('click', function previousSection(){
+
+
   firstArea.style.display="block"
   secondArea.style.display="none"
 
