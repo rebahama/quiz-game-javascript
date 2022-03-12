@@ -54,12 +54,31 @@ body {
     border: 1px solid #ccc;
 }
 
-#quiz-form {
-color:black;
-margin-top: 5%;
-text-align: center;
-
+#quiz-form {  
+    color:#000000;
+    width: 50%;
+    margin-top: 8%; 
+    margin-left: 28%;
+    border: 1px #000000 solid; 
+    padding-left: 1%;  
+    font-weight: bold;
+    font-size: 150%;
 }
+/*style the radiobuttons*/
+.radio-container{
+    background-color: #f4f4f4;
+    display: block;
+    position: relative;
+    padding: 10px 0px;
+    cursor: pointer;   
+    font-size: 110%;
+    border: 1px #000000 solid;
+    
+}
+.radio-container:hover{
+    background-color: #000080;
+}
+
 
 
 
