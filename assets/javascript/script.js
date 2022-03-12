@@ -3,9 +3,11 @@ let  showQuiz=document.getElementById('quiz-form');
 let  showPlay=document.getElementById('play-btn');
 let  showFlex=document.getElementById('flex-container-1');
 let  nextButton=document.getElementById('next-area-btn');
+let  previousButton=document.getElementById('previous-area-btn')
 let  firstArea=document.getElementById('next-area-1')
 let  secondArea=document.getElementById('next-area-2');
-const  answerArray=["Barack Obama", "4"] 
+
+const  answerArray=["Barack Obama", "4","Nordic sea"] 
 // display the id when clicking the variabe and hideing the div.
 // if statment for when the field is empty 
 showPlay.addEventListener('click', function showArea() {
@@ -36,6 +38,7 @@ function answerScore(){
 
     let question1=document.quiz.question1.value;
     let question2=document.quiz.question2.value;
+    let question4=document.quiz.question4.value;
     let currentScore=0
 
     if(question1===answerArray[0]){
@@ -44,6 +47,10 @@ function answerScore(){
     if(question2===answerArray[1]){
         currentScore++;
     }
+    if(question4===answerArray[2]){
+        currentScore++;
+    }
+
     console.log(currentScore)
 
 
@@ -53,6 +60,14 @@ nextButton.addEventListener('click', function nextSection() {
      
    firstArea.style.display="none"
    secondArea.style.display="block";
+
+
+})
+
+//function for when clicking the previous button
+previousButton.addEventListener('click', function previousSection(){
+  firstArea.style.display="block"
+  secondArea.style.display="none"
 
 
 })
