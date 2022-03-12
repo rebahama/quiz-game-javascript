@@ -2,6 +2,9 @@
 let  showQuiz=document.getElementById('quiz-form');
 let  showPlay=document.getElementById('play-btn');
 let  showFlex=document.getElementById('flex-container-1');
+let  nextButton=document.getElementById('next-area-btn');
+let  firstArea=document.getElementById('next-area-1')
+let  secondArea=document.getElementById('next-area-2');
 const  answerArray=["Barack Obama", "4"] 
 // display the id when clicking the variabe and hideing the div.
 // if statment for when the field is empty 
@@ -42,7 +45,18 @@ function answerScore(){
         currentScore++;
     }
     console.log(currentScore)
+
+
 }
+// function for when clicking next to show a new div area 
+nextButton.addEventListener('click', function nextSection() {
+     
+   firstArea.style.display="none"
+   secondArea.style.display="block";
+
+
+})
+
 
 
 

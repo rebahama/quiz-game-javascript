@@ -60,7 +60,8 @@ body {
     margin-top: 8%; 
     margin-left: 28%;
     border: 1px #000000 solid; 
-    padding-left: 1%;  
+    padding-left: 1%;
+    padding-right: 1%;   
     font-weight: bold;
     font-size: 150%;
 }
@@ -72,11 +73,14 @@ body {
     padding: 10px 0px;
     cursor: pointer;   
     font-size: 110%;
-    border: 1px #000000 solid;
-    
+    border: 1px #000000 solid;    
 }
 .radio-container:hover{
     background-color: #000080;
+}
+/*area after clicking the next button*/
+#next-area-2{
+    display: none;
 }
 
 
