@@ -12,15 +12,18 @@ const  answerArray=["Barack Obama", "4","Nordic sea"]
 // if statment for when the field is empty 
 showPlay.addEventListener('click', function showArea() {
 
-
+   
     let  emptyField=document.getElementById('input-name').value
     if  (emptyField==""){
         alert('Please write a username before clicking play')
         return false}
     else if (emptyField){
+        
         showQuiz.style.display="block";
         showFlex.style.display="none";
+        
     }
+  
 
 })
 // when clicking the showplay variable and reciveInput variable takes value from the input-name and injects it into the user-name id with a click.
@@ -57,7 +60,7 @@ function answerScore(){
 }
 // function for when clicking next to show a new div area 
 nextButton.addEventListener('click', function nextSection() {
-     
+    
    firstArea.style.display="none"
    secondArea.style.display="block";
 

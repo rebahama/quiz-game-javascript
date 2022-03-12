@@ -38,7 +38,7 @@ body {
     justify-content: space-around;
 }
 
-#play-btn {
+#play-btn, #next-area-btn,#submit-btn, #previous-area-btn{
     background-color: #000080;
     border: none;
     color: white;
@@ -46,6 +46,11 @@ body {
     text-align: center;
     text-decoration: none;
     cursor: pointer;
+    margin-top: 2%;
+}
+
+#submit-btn{
+    float: right;
 }
 
 #input-name {
@@ -78,7 +83,7 @@ body {
 .radio-container:hover{
     background-color: #000080;
 }
-/*area after clicking the next button*/
+/*not showing area after clicking the play button*/
 #next-area-2{
     display: none;
 }
