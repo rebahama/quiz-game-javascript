@@ -3,10 +3,41 @@ let  showQuiz=document.getElementById('quiz-form');
 let  showPlay=document.getElementById('play-btn');
 let  showFlex=document.getElementById('flex-container-1');
 let  nextButton=document.getElementById('next-area-btn');
-let  previousButton=document.getElementById('previous-area-btn')
-let  firstArea=document.getElementById('next-area-1')
+let  previousButton=document.getElementById('previous-area-btn');
+let  firstArea=document.getElementById('next-area-1');
 let  secondArea=document.getElementById('next-area-2');
-let  thirdArea=document.getElementById('next-area-3')
+let  thirdArea=document.getElementById('next-area-3');
+
+
+const allSection = [firstArea,secondArea,thirdArea]
+
+
+
+nextButton.addEventListener('click', function nextSection(){
+for (let i=0; i< allSection.length; i++){
+
+if(allSection[0].style.display="block"){
+    allSection[1].style.display="block"
+    allSection[0].style.display="none"
+
+    
+}
+
+allSection[2].style.display="block"
+allSection[1].style.display="block"
+allSection[2].style.display="none"
+
+
+
+
+
+
+
+}
+
+})
+
+
 
 const  answerArray=["Barack Obama", "4","Nordic sea"] 
 // display the id when clicking the variabe and hideing the div.
@@ -59,23 +90,10 @@ function answerScore(){
 
 
 }
-// function for when clicking next to show a new div area 
-nextButton.addEventListener('click', function nextSection() {
-    
-   firstArea.style.display="none"
-   secondArea.style.display="block";
-   
-})
-
-//function for when clicking the previous button
-previousButton.addEventListener('click', function previousSection(){
 
 
-  firstArea.style.display="block"
-  secondArea.style.display="none"
 
 
-})
 
 
 
