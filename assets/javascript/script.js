@@ -7,8 +7,9 @@ let  previousButton=document.getElementById('previous-area-btn');
 let  firstArea=document.getElementById('next-area-1');
 let  secondArea=document.getElementById('next-area-2');
 let  thirdArea=document.getElementById('next-area-3');
-
-
+//Array for holding the answer values
+const  answerArray=["Barack Obama", "4","Russia","Caspian Sea","1914","Elon Musk","1945","29","China"]; 
+// Array for holding the diffrent div elements in html document
 const allSection = [firstArea,secondArea,thirdArea]
 
 
@@ -25,7 +26,7 @@ if(allSection[0].style.display="block"){
 
 allSection[2].style.display="block"
 allSection[1].style.display="block"
-allSection[2].style.display="none"
+
 
 
 
@@ -39,7 +40,7 @@ allSection[2].style.display="none"
 
 
 
-const  answerArray=["Barack Obama", "4","Nordic sea"] 
+
 // display the id when clicking the variabe and hideing the div.
 // if statment for when the field is empty 
 showPlay.addEventListener('click', function showArea() {
@@ -73,7 +74,13 @@ function answerScore(){
 
     let question1=document.quiz.question1.value;
     let question2=document.quiz.question2.value;
+    let question3=document.quiz.question3.value;
     let question4=document.quiz.question4.value;
+    let question5=document.quiz.question5.value;
+    let question6=document.quiz.question6.value;
+    let question7=document.quiz.question7.value;
+    let question8=document.quiz.question8.value;
+    let question9=document.quiz.question9.value;
     let currentScore=0
 
     if(question1===answerArray[0]){
@@ -82,9 +89,32 @@ function answerScore(){
     if(question2===answerArray[1]){
         currentScore++;
     }
-    if(question4===answerArray[2]){
+    if(question3===answerArray[2]){
         currentScore++;
     }
+    if(question4===answerArray[3]){
+        currentScore++;
+    }
+    if(question5===answerArray[4]){
+        currentScore++;
+    }
+    if(question6===answerArray[5])
+    {
+        currentScore++;
+    }
+    if(question7===answerArray[6])
+    {
+        currentScore++;
+    }
+    if(question8===answerArray[7])
+    {
+        currentScore++;
+    }
+    if(question9===answerArray[8])
+    {
+        currentScore++;
+    }
+
 
     console.log(currentScore)
 
