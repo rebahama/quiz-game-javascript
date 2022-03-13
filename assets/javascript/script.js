@@ -8,11 +8,13 @@ let firstArea = document.getElementById('next-area-1');
 let secondArea = document.getElementById('next-area-2');
 let thirdArea = document.getElementById('next-area-3');
 let submitButton=document.getElementById('submit-btn');
-let radioBackground=document.getElementsByClassName('radio-container')
+let radioBackground=document.getElementsByClassName('radio-container');
+let submitArea=document.getElementById('submit-area');
+let currentScore = 0
 
 //Array for holding the answer values
 const answerArray = ['Barack Obama', '15', 'Russia', 'Caspian Sea', '1914', 'Elon Musk', '1945', '29', 'China'];
-const wrongArray=['Donald Trump','36','China','Baikal Lake','1919','Jeff Bezos','1943','45','India']
+const wrongArray=['Donald Trump','36','China','Baikal Lake','1919','Jeff Bezos','1943','45','India'];
 // Array for holding the diffrent div elements in html document
 const allSection = [firstArea, secondArea, thirdArea]
 
@@ -48,7 +50,7 @@ showPlay.addEventListener('click', function showArea() {
 
     }
 
-})
+});
 // when clicking the showplay variable and reciveInput variable takes value from the input-name and injects it into the user-name id with a click.
 showPlay.addEventListener('click', function reciveUsername() {
 
@@ -57,6 +59,7 @@ showPlay.addEventListener('click', function reciveUsername() {
 
 })
 // function for recieving the values from html radio button and checking if the answers are correct with the array index. If it is correct then it will increment.
+
 function answerScore() {
 
     let question1 = document.quiz.question1.value;
@@ -68,7 +71,7 @@ function answerScore() {
     let question7 = document.quiz.question7.value;
     let question8 = document.quiz.question8.value;
     let question9 = document.quiz.question9.value;
-    let currentScore = 0
+    
 // if the answer is wrong the backgorund will turn red, if its correct the answer will turn green
     if (question1 === answerArray[0]) {
         radioBackground[0].style.backgroundColor = "green";
@@ -141,16 +144,18 @@ function answerScore() {
         radioBackground[16].style.backgroundColor = "red";
     }
 
-    console.log(currentScore)
     
+
 }
 
-
-submitButton.addEventListener('click', function submitQuiz(){
+// click event and function showing how many points you got from the quiz based on your clicks
+submitButton.addEventListener('click', function showSubmitArea(){
+showQuiz.style.display="none";
+  submitArea.style.display="block";
+  let showallscore=`you answered right on ${currentScore} questions out of 9`
+  console.log(showallscore)
+  document.getElementById('answer-score').innerHTML=showallscore;
     
-for(let i=0; i <allSection.length; i++)
-    allSection[i].style.display="block"
-
-
 
 })
+

@@ -83,8 +83,8 @@ body {
 .radio-container:hover{
     background-color: #000080;
 }
-/*not showing area after clicking the play button*/
-#next-area-2, #next-area-3{
+/*not showing area until clicking the play button*/
+#next-area-2, #next-area-3,#submit-area{
     display: none;
 }
 
