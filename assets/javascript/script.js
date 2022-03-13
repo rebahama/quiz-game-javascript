@@ -13,7 +13,8 @@ let submitArea = document.getElementById('submit-area');
 let userName = document.getElementById('answer-score');
 let showAllAnswers = document.getElementById('show-all-answers-btn');
 let introHeading = document.getElementById('intro-heading');
-let restartButton = document.getElementById('restart-btn')
+let restartButton = document.getElementById('restart-btn');
+let wrongInput = document.getElementById('wrong-input-text');
 let currentScore = 0
 
 //Array for holding the answer values
@@ -43,9 +44,10 @@ nextButton.addEventListener('click', function nextSection() {
 // display the id when clicking the variabe and hideing the div.
 // if statment for when the field is empty 
 showPlay.addEventListener('click', function showArea() {
-
+let noInputText="Please write a username before clicking start"
     let emptyField = document.getElementById('input-name').value
     if (emptyField == "") {
+        wrongInput.innerHTML=noInputText;
         alert('Please write a username before clicking play')
         return false
     } else if (emptyField) {
@@ -161,14 +163,14 @@ submitButton.addEventListener('click', function showSubmitArea() {
 
     showQuiz.style.display = "none";
     submitArea.style.display = "block";
-    let showallscore = `Good job ${userName.innerHTML} you answered right on ${currentScore} questions out of 9`
+    let showallscore = `Good job ${userName.innerHTML} you answered right on ${currentScore} questions out of 9. Click show quiz to view how you answered`
     console.log(showallscore)
     document.getElementById('answer-score').innerHTML = showallscore;
 
 
 })
 //Restart game clickevent
-restartButton.addEventListener('click', function restartGame(){
-    restartButton=location.reload();
-   
-   })
+restartButton.addEventListener('click', function restartGame() {
+    restartButton = location.reload();
+
+})

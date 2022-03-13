@@ -121,3 +121,10 @@ body {
 #submit-area {
     display: none;
 }
+
+/*style the wrong input text*/
+#wrong-input-text{
+    font-size: 110%;
+    background-color: #000000;
+    font-weight: bold;
+}
