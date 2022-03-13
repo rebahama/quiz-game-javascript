@@ -7,14 +7,16 @@ let previousButton = document.getElementById('previous-area-btn');
 let firstArea = document.getElementById('next-area-1');
 let secondArea = document.getElementById('next-area-2');
 let thirdArea = document.getElementById('next-area-3');
-let submitButton=document.getElementById('submit-btn');
-let radioBackground=document.getElementsByClassName('radio-container');
-let submitArea=document.getElementById('submit-area');
+let submitButton = document.getElementById('submit-btn');
+let radioBackground = document.getElementsByClassName('radio-container');
+let submitArea = document.getElementById('submit-area');
+let userName = document.getElementById('answer-score');
+let showAllAnswers = document.getElementById('show-all-answers');
 let currentScore = 0
 
 //Array for holding the answer values
 const answerArray = ['Barack Obama', '15', 'Russia', 'Caspian Sea', '1914', 'Elon Musk', '1945', '29', 'China'];
-const wrongArray=['Donald Trump','36','China','Baikal Lake','1919','Jeff Bezos','1943','45','India'];
+const wrongArray = ['Donald Trump', '36', 'China', 'Baikal Lake', '1919', 'Jeff Bezos', '1943', '45', 'India'];
 // Array for holding the diffrent div elements in html document
 const allSection = [firstArea, secondArea, thirdArea]
 
@@ -55,7 +57,7 @@ showPlay.addEventListener('click', function showArea() {
 showPlay.addEventListener('click', function reciveUsername() {
 
     let reciveInput = document.getElementById('input-name').value
-    document.getElementById('user-name').innerHTML = reciveInput;
+    userName.innerHTML = reciveInput;
 
 })
 // function for recieving the values from html radio button and checking if the answers are correct with the array index. If it is correct then it will increment.
@@ -71,91 +73,92 @@ function answerScore() {
     let question7 = document.quiz.question7.value;
     let question8 = document.quiz.question8.value;
     let question9 = document.quiz.question9.value;
-    
-// if the answer is wrong the backgorund will turn red, if its correct the answer will turn green
+
+    // if the answer is wrong the backgorund will turn red, if its correct the answer will turn green
     if (question1 === answerArray[0]) {
         radioBackground[0].style.backgroundColor = "green";
         currentScore++;
+    } else if (question1 === wrongArray[0]) {
+        radioBackground[1].style.backgroundColor = "red";
     }
-   else if (question1 === wrongArray[0]){
-    radioBackground[1].style.backgroundColor = "red";
-   }
     if (question2 === answerArray[1]) {
         radioBackground[2].style.backgroundColor = "green";
         currentScore++;
-    }
-    else if (question2 === wrongArray[1]){
+    } else if (question2 === wrongArray[1]) {
         radioBackground[3].style.backgroundColor = "red";
     }
-   
+
     if (question3 === answerArray[2]) {
         radioBackground[5].style.backgroundColor = "green";
         currentScore++;
-    }
-    else if (question3 === wrongArray[2]){
+    } else if (question3 === wrongArray[2]) {
         radioBackground[4].style.backgroundColor = "red";
     }
 
     if (question4 === answerArray[3]) {
         radioBackground[6].style.backgroundColor = "green";
         currentScore++;
-    }
-    else if (question4 === wrongArray[3]){
+    } else if (question4 === wrongArray[3]) {
         radioBackground[7].style.backgroundColor = "red";
     }
 
     if (question5 === answerArray[4]) {
         radioBackground[9].style.backgroundColor = "green";
         currentScore++;
-    }
-    else if (question5 === wrongArray[4]){
+    } else if (question5 === wrongArray[4]) {
         radioBackground[8].style.backgroundColor = "red";
     }
 
     if (question6 === answerArray[5]) {
         radioBackground[11].style.backgroundColor = "green";
         currentScore++;
-    }
-    else if (question6 === wrongArray[5]){
+    } else if (question6 === wrongArray[5]) {
         radioBackground[10].style.backgroundColor = "red";
     }
 
     if (question7 === answerArray[6]) {
         radioBackground[12].style.backgroundColor = "green";
         currentScore++;
-    }
-    else if (question7 === wrongArray[6]){
+    } else if (question7 === wrongArray[6]) {
         radioBackground[13].style.backgroundColor = "red";
     }
 
     if (question8 === answerArray[7]) {
         radioBackground[14].style.backgroundColor = "green";
         currentScore++;
-    }
-    else if (question8 === wrongArray[7]){
+    } else if (question8 === wrongArray[7]) {
         radioBackground[15].style.backgroundColor = "red";
     }
 
     if (question9 === answerArray[8]) {
         radioBackground[17].style.backgroundColor = "green";
         currentScore++;
-    }
-    else if (question9 === wrongArray[8]){
+    } else if (question9 === wrongArray[8]) {
         radioBackground[16].style.backgroundColor = "red";
     }
 
-    
-
 }
+// after submiting quiz click on show answers to see what the user got right and wrong
+showAllAnswers.addEventListener('click', function showEverything(){
+    for (let i = 0; i < allSection.length; i++) {
 
-// click event and function showing how many points you got from the quiz based on your clicks
-submitButton.addEventListener('click', function showSubmitArea(){
-showQuiz.style.display="none";
-  submitArea.style.display="block";
-  let showallscore=`you answered right on ${currentScore} questions out of 9`
-  console.log(showallscore)
-  document.getElementById('answer-score').innerHTML=showallscore;
+        allSection[i].style.display="block";
+    }
+    submitButton.style.display="none";
+    previousButton.style.display="none";
+    nextButton.style.display="none";
+    showQuiz.style.display="block";
     
 
 })
+// click event and function showing how many points you got from the quiz based on your clicks
+submitButton.addEventListener('click', function showSubmitArea() {
+    showQuiz.style.display = "none";
+    submitArea.style.display = "block";
+   
+    let showallscore = `Good job ${userName.innerHTML} you answered right on ${currentScore} questions out of 9`
+    console.log(showallscore)
+    document.getElementById('answer-score').innerHTML = showallscore;
 
+
+})
