@@ -11,16 +11,17 @@ let submitButton=document.getElementById('submit-btn');
 let radioBackground=document.getElementsByClassName('radio-container')
 
 //Array for holding the answer values
-const answerArray = ["Barack Obama", "4", "Russia", "Caspian Sea", "1914", "Elon Musk", "1945", "29", "China"];
+const answerArray = ['Barack Obama', '15', 'Russia', 'Caspian Sea', '1914', 'Elon Musk', '1945', '29', 'China'];
+const wrongArray=['Donald Trump','36','China','Baikal Lake','1919','Jeff Bezos','1943','45','India']
 // Array for holding the diffrent div elements in html document
 const allSection = [firstArea, secondArea, thirdArea]
 
 nextButton.addEventListener('click', function nextSection() {
     for (let i = 0; i < allSection.length; i++) {
 
-        if (allSection[0].style.display = "block") {
-            allSection[1].style.display = "block"
-            allSection[0].style.display = "none"
+        if (allSection[0].style.display = 'block') {
+            allSection[1].style.display = 'block'
+            allSection[0].style.display = 'none'
 
 
         }
@@ -73,34 +74,47 @@ function answerScore() {
         radioBackground[0].style.backgroundColor = "green";
         currentScore++;
     }
+   else if (question1 === wrongArray[0]){
+    radioBackground[1].style.backgroundColor = "red";
+   }
     if (question2 === answerArray[1]) {
         radioBackground[2].style.backgroundColor = "green";
         currentScore++;
     }
+    else if (question2 === wrongArray[1]){
+        radioBackground[3].style.backgroundColor = "red";
+       }
+   
     if (question3 === answerArray[2]) {
         radioBackground[5].style.backgroundColor = "green";
         currentScore++;
     }
+
     if (question4 === answerArray[3]) {
         radioBackground[6].style.backgroundColor = "green";
         currentScore++;
     }
+
     if (question5 === answerArray[4]) {
         radioBackground[9].style.backgroundColor = "green";
         currentScore++;
     }
+
     if (question6 === answerArray[5]) {
         radioBackground[11].style.backgroundColor = "green";
         currentScore++;
     }
+
     if (question7 === answerArray[6]) {
         radioBackground[12].style.backgroundColor = "green";
         currentScore++;
     }
+
     if (question8 === answerArray[7]) {
         radioBackground[14].style.backgroundColor = "green";
         currentScore++;
     }
+
     if (question9 === answerArray[8]) {
         radioBackground[17].style.backgroundColor = "green";
         currentScore++;
