@@ -24,7 +24,7 @@ body {
 /*style the quiz container*/
 #quiz-form {
     display: none;
-    background-color: orange;
+    background-color: #f7e706;
     color: #0000;
     border-radius: 10px;
 }
@@ -41,8 +41,8 @@ body {
     border-radius: 10%;
     width: 40%;
     height: 450px;
-    border: 1px #000000 solid;
-    background-color: #ffa500;
+    border: 10px #000000 solid;
+    background-color: #f7e706;
     align-items: center;
     justify-content: space-around;
 }
@@ -61,6 +61,7 @@ body {
     cursor: pointer;
     margin-top: 2%;
     border-radius: 5px;
+    border:3px #000000 solid;
 }
 
 #show-all-answers-btn,#restart-btn {
@@ -94,7 +95,7 @@ body {
     width: 50%;
     margin-top: 8%;
     margin-left: 28%;
-    border: 1px #000000 solid;
+    border: 10px #000000 solid;
     padding: 1%;
     font-weight: bold;
     font-size: 150%;
