@@ -11,8 +11,9 @@ let submitButton = document.getElementById('submit-btn');
 let radioBackground = document.getElementsByClassName('radio-container');
 let submitArea = document.getElementById('submit-area');
 let userName = document.getElementById('answer-score');
-let showAllAnswers = document.getElementById('show-all-answers');
+let showAllAnswers = document.getElementById('show-all-answers-btn');
 let introHeading = document.getElementById('intro-heading');
+let restartButton = document.getElementById('restart-btn')
 let currentScore = 0
 
 //Array for holding the answer values
@@ -35,7 +36,7 @@ nextButton.addEventListener('click', function nextSection() {
         allSection[1].style.display = "block"
 
     }
-    
+
 
 })
 
@@ -53,7 +54,7 @@ showPlay.addEventListener('click', function showArea() {
         showFlex.style.display = "none";
 
     }
-    introHeading.style.display="none";
+    introHeading.style.display = "none";
 
 });
 // when clicking the showplay variable and reciveInput variable takes value from the input-name and injects it into the user-name id with a click.
@@ -141,7 +142,7 @@ function answerScore() {
     }
 
 }
-// after submiting quiz click on show answers to see what the user got right and wrong
+// after submiting quiz click on show answers to see what the user got right and wrong and also hide all the buttons.
 showAllAnswers.addEventListener('click', function showEverything() {
     for (let i = 0; i < allSection.length; i++) {
 
@@ -154,7 +155,7 @@ showAllAnswers.addEventListener('click', function showEverything() {
 
 
 })
-// click event and function showing how many points you got from the quiz based on your clicks
+// click event and function showing how many points you got from the quiz based on your clicks.
 submitButton.addEventListener('click', function showSubmitArea() {
 
 
@@ -166,3 +167,8 @@ submitButton.addEventListener('click', function showSubmitArea() {
 
 
 })
+//Restart game clickevent
+restartButton.addEventListener('click', function restartGame(){
+    restartButton=location.reload();
+   
+   })
