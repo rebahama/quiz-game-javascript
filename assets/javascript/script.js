@@ -69,7 +69,7 @@ function answerScore() {
     let question8 = document.quiz.question8.value;
     let question9 = document.quiz.question9.value;
     let currentScore = 0
-
+// if the answer is wrong the backgorund will turn red, if its correct the answer will turn green
     if (question1 === answerArray[0]) {
         radioBackground[0].style.backgroundColor = "green";
         currentScore++;
@@ -83,41 +83,62 @@ function answerScore() {
     }
     else if (question2 === wrongArray[1]){
         radioBackground[3].style.backgroundColor = "red";
-       }
+    }
    
     if (question3 === answerArray[2]) {
         radioBackground[5].style.backgroundColor = "green";
         currentScore++;
+    }
+    else if (question3 === wrongArray[2]){
+        radioBackground[4].style.backgroundColor = "red";
     }
 
     if (question4 === answerArray[3]) {
         radioBackground[6].style.backgroundColor = "green";
         currentScore++;
     }
+    else if (question4 === wrongArray[3]){
+        radioBackground[7].style.backgroundColor = "red";
+    }
 
     if (question5 === answerArray[4]) {
         radioBackground[9].style.backgroundColor = "green";
         currentScore++;
+    }
+    else if (question5 === wrongArray[4]){
+        radioBackground[8].style.backgroundColor = "red";
     }
 
     if (question6 === answerArray[5]) {
         radioBackground[11].style.backgroundColor = "green";
         currentScore++;
     }
+    else if (question6 === wrongArray[5]){
+        radioBackground[10].style.backgroundColor = "red";
+    }
 
     if (question7 === answerArray[6]) {
         radioBackground[12].style.backgroundColor = "green";
         currentScore++;
+    }
+    else if (question7 === wrongArray[6]){
+        radioBackground[13].style.backgroundColor = "red";
     }
 
     if (question8 === answerArray[7]) {
         radioBackground[14].style.backgroundColor = "green";
         currentScore++;
     }
+    else if (question8 === wrongArray[7]){
+        radioBackground[15].style.backgroundColor = "red";
+    }
 
     if (question9 === answerArray[8]) {
         radioBackground[17].style.backgroundColor = "green";
         currentScore++;
+    }
+    else if (question9 === wrongArray[8]){
+        radioBackground[16].style.backgroundColor = "red";
     }
 
     console.log(currentScore)
