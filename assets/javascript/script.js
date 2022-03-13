@@ -12,6 +12,7 @@ let radioBackground = document.getElementsByClassName('radio-container');
 let submitArea = document.getElementById('submit-area');
 let userName = document.getElementById('answer-score');
 let showAllAnswers = document.getElementById('show-all-answers');
+let introHeading = document.getElementById('intro-heading');
 let currentScore = 0
 
 //Array for holding the answer values
@@ -34,6 +35,7 @@ nextButton.addEventListener('click', function nextSection() {
         allSection[1].style.display = "block"
 
     }
+    
 
 })
 
@@ -51,6 +53,7 @@ showPlay.addEventListener('click', function showArea() {
         showFlex.style.display = "none";
 
     }
+    introHeading.style.display="none";
 
 });
 // when clicking the showplay variable and reciveInput variable takes value from the input-name and injects it into the user-name id with a click.
@@ -139,23 +142,24 @@ function answerScore() {
 
 }
 // after submiting quiz click on show answers to see what the user got right and wrong
-showAllAnswers.addEventListener('click', function showEverything(){
+showAllAnswers.addEventListener('click', function showEverything() {
     for (let i = 0; i < allSection.length; i++) {
 
-        allSection[i].style.display="block";
+        allSection[i].style.display = "block";
     }
-    submitButton.style.display="none";
-    previousButton.style.display="none";
-    nextButton.style.display="none";
-    showQuiz.style.display="block";
-    
+    submitButton.style.display = "none";
+    previousButton.style.display = "none";
+    nextButton.style.display = "none";
+    showQuiz.style.display = "block";
+
 
 })
 // click event and function showing how many points you got from the quiz based on your clicks
 submitButton.addEventListener('click', function showSubmitArea() {
+
+
     showQuiz.style.display = "none";
     submitArea.style.display = "block";
-   
     let showallscore = `Good job ${userName.innerHTML} you answered right on ${currentScore} questions out of 9`
     console.log(showallscore)
     document.getElementById('answer-score').innerHTML = showallscore;
