@@ -15,9 +15,10 @@
 <body>
     <!-- header starts-->
     <header id="intro-heading">
-        <h2 id="intro-text">Welcome to QuizIt write your username and press play to begin</h2>
+        <h1 id="intro-text">QuizIt</h1>
         <p id="wrong-input-text"> </p>
     </header>
+    
     <!-- quiz not displayed until play-btn is clicked-->
     <form id="quiz-form" name="quiz">
 
@@ -54,7 +55,7 @@
             <label class="radio-container"> Baikal Lake
                 <input type="radio" id="question-4" value="Baikal Lake" name="question4">
             </label>
-            <p> 5.When did world war 1 start?</p>
+            <p> 5.When did the first world war start?</p>
             <label class="radio-container"> 1919
                 <input type="radio" id="question-5" value="1919" name="question5">
             </label>
@@ -69,7 +70,6 @@
                 <input type="radio" id="question-6" value="Elon Musk" name="question6">
             </label>
         </div>
-
         <!-- area 3 shown when clicking next button from area2-->
         <div id="next-area-3">
             <p> 7.What year did USA drop the Atomic bomb on Japan?</p>
@@ -79,7 +79,7 @@
             <label class="radio-container"> 1943
                 <input type="radio" id="question-7" value="1943" name="question7">
             </label>
-            <p> 8.What is 8 + 7  x 3?</p>
+            <p> 8.What is 8 + 7 x 3?</p>
             <label class="radio-container"> 29
                 <input type="radio" id="question-8" value="29" name="question8">
             </label>
@@ -98,28 +98,26 @@
         <button id="previous-area-btn" type="button">previous</button>
         <button id="next-area-btn" type="button">Next</button>
         <button id="submit-btn" type="button" onclick="answerScore();"> Submit quiz </button>
-
         
     </form>
-
-    <!-- flexcontainer for username input and play button-->
+    <!-- flexcontainer for username input and start quiz button-->
     <div id="flex-container-1">
         <div id="inner-flex-1">
+            
             <input type="text" id="input-name" placeholder="Username">
             <button id="play-btn"> Click to play</button>
         </div>
-        
     </div>
-    
-<!-- Area that is shown after clicking submit-->
+    <h2 id="intro-rules">After creating a username and clicking play you will be presented with a question and 2 choiches. Choose the option you think is right. GoodLuck!</h2>
+    <!-- Area that is shown after clicking submit button-->
     <div id="submit-area">
         <h2 id="answer-score"> hello</h2>
         <p id="user-name"></p>
         <button id="show-all-answers-btn">Show Answers</button>
         <button id="restart-btn">Restart Quiz</button>
     </div>
-
 </body>
+
 <script src="assets/javascript/script.js"></script>
 
 </html>

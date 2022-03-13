@@ -13,12 +13,14 @@ body {
     background-color: #000080;
     font-family: 'Architects Daughter', cursive;
     color: #f4f4f4;
+    
 
 }
 
 #intro-heading {
     text-align: center;
-    padding: 2%;
+    padding: 1%;
+    background-color: #000000;
 }
 
 /*style the quiz container*/
@@ -33,6 +35,7 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 5%;
+    min-height: 60vh;
 }
 
 /*style and posistion inputfield and playbutton inside the flex container*/
@@ -45,6 +48,16 @@ body {
     background-color: #f7e706;
     align-items: center;
     justify-content: space-around;
+}
+#intro-rules{
+    text-align: center;
+    padding-top: 2%;
+    padding-right: 40%;
+    padding-left: 40%;
+    margin-top: 2%;
+    background-color: black;
+    
+    
 }
 
 /*style the buttons*/
@@ -93,7 +106,7 @@ body {
 #quiz-form {
     color: #000000;
     width: 50%;
-    margin-top: 8%;
+    margin-top: 7%;
     margin-left: 28%;
     border: 10px #000000 solid;
     padding: 1%;

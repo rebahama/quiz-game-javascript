@@ -1,4 +1,3 @@
-
 //variabels to access the id in the html file.
 let showQuiz = document.getElementById('quiz-form');
 let showPlay = document.getElementById('play-btn');
@@ -16,6 +15,7 @@ let showAllAnswers = document.getElementById('show-all-answers-btn');
 let introHeading = document.getElementById('intro-heading');
 let restartButton = document.getElementById('restart-btn');
 let wrongInput = document.getElementById('wrong-input-text');
+let introRules=document.getElementById('intro-rules')
 let currentScore = 0;
 
 //Array for holding the answer values
@@ -46,10 +46,10 @@ answerScore();
 // display the id when clicking the variabe and hideing the div.
 // if statment for when the field is empty 
 showPlay.addEventListener('click', function showArea() {
-let noInputText="Please write a username before clicking start";
+    let noInputText = "Please write a username before clicking start";
     let emptyField = document.getElementById('input-name').value;
     if (emptyField == "") {
-        wrongInput.innerHTML=noInputText;
+        wrongInput.innerHTML = noInputText;
         alert('Please write a username before clicking play');
         return false;
     } else if (emptyField) {
@@ -70,7 +70,7 @@ showPlay.addEventListener('click', function reciveUsername() {
 });
 // function for recieving the values from html radio button and checking if the answers are correct with the array index. If it is correct then it will increment.
 
-function answerScore(){
+function answerScore() {
 
     let question1 = document.quiz.question1.value;
     let question2 = document.quiz.question2.value;
@@ -159,10 +159,10 @@ showAllAnswers.addEventListener('click', function showEverything() {
 
 
 });
-// click event and function showing how many points you got from the quiz based on your clicks.
+// click event and function showing how many points you got from the quiz based on your clicks and not displaying the intro.
 submitButton.addEventListener('click', function showSubmitArea() {
-
-
+    introRules.style.display="none";
+    introHeading.style.display="none";
     showQuiz.style.display = "none";
     submitArea.style.display = "block";
     let showallscore = `Good job ${userName.innerHTML} you answered right on ${currentScore} questions out of 9. Click show quiz to view how you answered`;
