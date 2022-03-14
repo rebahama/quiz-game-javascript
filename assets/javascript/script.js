@@ -9,14 +9,14 @@ let secondArea = document.getElementById('next-area-2');
 let thirdArea = document.getElementById('next-area-3');
 let submitButton = document.getElementById('submit-btn');
 let radioBackground = document.getElementsByClassName('radio-container');
-let submitArea = document.getElementById('submit-area');
+let currentSection = firstArea;
 let userName = document.getElementById('answer-score');
 let showAllAnswers = document.getElementById('show-all-answers-btn');
-let introHeading = document.getElementById('intro-heading');
+
 let restartButton = document.getElementById('restart-btn');
-let wrongInput = document.getElementById('wrong-input-text');
-let introRules = document.getElementById('intro-rules')
-let imageScore=document.getElementById('image-score')
+
+
+
 let currentScore = 0;
 //Array for holding the answer values
 const answerArray = ['Barack Obama', '15', 'Russia', 'Caspian Sea', '1914', 'Elon Musk', '1945', '29', 'China'];
@@ -24,23 +24,41 @@ const wrongArray = ['Donald Trump', '36', 'China', 'Baikal Lake', '1919', 'Jeff 
 // Array for holding the diffrent div elements in html document
 const allSection = [firstArea, secondArea, thirdArea];
 //array for holding images
-const imageArray= ['assets/images/gold-medal.jpeg','assets/images/silver-medal.jpeg', 'assets/images/sad-smiley.jpeg']
+const imageArray = ['assets/images/gold-medal.jpeg', 'assets/images/silver-medal.jpeg', 'assets/images/sad-smiley.jpeg']
 
-nextButton.addEventListener('click', function nextSection() {
-    for (let i = 0; i < allSection.length; i++) {
-            allSection[0].style.display = 'block'; 
-            allSection[1].style.display = 'block';
-            allSection[0].style.display = 'none';
-            allSection[2].style.display=="block"   
+
+
+
+
+nextButton.addEventListener('click', nextSection)
+
+
+function nextSection() {
+    if (currentSection === firstArea) {
+        firstArea.style.display = 'none';
+        secondArea.style.display = 'block';
+        currentSection = secondArea;
+    } else if (currentSection === secondArea) {
+        secondArea.style.display = 'none';
+        thirdArea.style.display = 'block';
+        currentSection = thirdArea;
+    } else if (currentSection === thirdArea) {
+        console.log("Invalid case");
     }
 
+};
 
-});
+
+
 answerScore();
 
 // display the id when clicking the variabe and hideing the div.
 // if statment for when the field is empty 
-showPlay.addEventListener('click', function showArea() {
+showPlay.addEventListener('click', showArea)
+
+
+function showArea() {
+    let wrongInput = document.getElementById('wrong-input-text');
     let noInputText = "Please write a username before clicking start";
     let emptyField = document.getElementById('input-name').value;
     if (emptyField == "") {
@@ -55,14 +73,16 @@ showPlay.addEventListener('click', function showArea() {
     }
     introHeading.style.display = "none";
 
-});
+};
 // when clicking the showplay variable and reciveInput variable takes value from the input-name and injects it into the user-name id with a click.
-showPlay.addEventListener('click', function reciveUsername() {
+showPlay.addEventListener('click', receiveUserName)
+
+function receiveUserName() {
 
     let reciveInput = document.getElementById('input-name').value;
     userName.innerHTML = reciveInput;
 
-});
+};
 // function for recieving the values from html radio button and checking if the answers are correct with the array index. If it is correct then it will increment.
 
 function answerScore() {
@@ -156,7 +176,12 @@ showAllAnswers.addEventListener('click', function showEverything() {
 
 });
 // click event and function showing how many points you got from the quiz based on your clicks and not displaying the intro after clicking submit
-submitButton.addEventListener('click', function showSubmitArea() {
+submitButton.addEventListener('click', showSubmitArea)
+
+function showSubmitArea() {
+    let introHeading = document.getElementById('intro-heading');
+    let introRules = document.getElementById('intro-rules')
+    let submitArea = document.getElementById('submit-area');
     introRules.style.display = "none";
     introHeading.style.display = "none";
     showQuiz.style.display = "none";
@@ -165,24 +190,21 @@ submitButton.addEventListener('click', function showSubmitArea() {
     console.log(showallscore);
     document.getElementById('answer-score').innerHTML = showallscore;
     // if statements that displays images in array based on score from increment
-    if(currentScore<3){
-    imageScore.src=imageArray[2]
+    let imageScore = document.getElementById('image-score')
+    if (currentScore < 3) {
+        imageScore.src = imageArray[2]
+    } else if (currentScore >= 5) {
+        imageScore.src = imageArray[1]
     }
-    else if(currentScore>=5)
-    {
-        imageScore.src=imageArray[1]
+    if (currentScore >= 6) {
+        imageScore.src = imageArray[0]
     }
-    if (currentScore>=6)
-    {
-        imageScore.src=imageArray[0]
-    }
+};
 
 
-});
 //Restart game clickevent
-restartButton.addEventListener('click', function restartGame() {
+restartButton.addEventListener('click', restartGame)
+
+function restartGame() {
     restartButton = location.reload();
-
-});
-
-
+}
