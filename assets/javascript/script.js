@@ -10,6 +10,7 @@ let thirdArea = document.getElementById('next-area-3');
 let submitButton = document.getElementById('submit-btn');
 let radioBackground = document.getElementsByClassName('radio-container');
 let currentSection = firstArea;
+
 let userName = document.getElementById('answer-score');
 let showAllAnswers = document.getElementById('show-all-answers-btn');
 
@@ -48,6 +49,23 @@ function nextSection() {
 
 };
 
+previousButton.addEventListener('click', previousBack)
+
+function previousBack() {
+
+    if (currentSection === thirdArea) {
+        thirdArea.style.display = "none";
+        secondArea.style.display = "block";
+        currentSection = secondArea
+    }
+    
+   else if (currentSection === secondArea) {
+        secondArea.style.display = "none"
+        firstArea.style.display = "block"
+        currentSection = firstArea
+    }
+
+}
 
 
 answerScore();
