@@ -15,7 +15,8 @@ let showAllAnswers = document.getElementById('show-all-answers-btn');
 let introHeading = document.getElementById('intro-heading');
 let restartButton = document.getElementById('restart-btn');
 let wrongInput = document.getElementById('wrong-input-text');
-let introRules=document.getElementById('intro-rules')
+let introRules = document.getElementById('intro-rules')
+let imageScore=document.getElementById('image-score')
 let currentScore = 0;
 
 //Array for holding the answer values
@@ -23,19 +24,21 @@ const answerArray = ['Barack Obama', '15', 'Russia', 'Caspian Sea', '1914', 'Elo
 const wrongArray = ['Donald Trump', '36', 'China', 'Baikal Lake', '1919', 'Jeff Bezos', '1943', '45', 'India'];
 // Array for holding the diffrent div elements in html document
 const allSection = [firstArea, secondArea, thirdArea];
+//array for holding images
+const imageArray= ['assets/images/gold-medal.jpeg','assets/images/silver-medal.jpeg', 'assets/images/sad-smiley.jpeg']
 
 nextButton.addEventListener('click', function nextSection() {
     for (let i = 0; i < allSection.length; i++) {
 
-        if (allSection[0].style.display = 'block') {
+        
+            allSection[0].style.display = 'block'; 
             allSection[1].style.display = 'block';
             allSection[0].style.display = 'none';
+            allSection[2].style.display=="block"    
+        
+            
 
-
-        }
-
-        allSection[2].style.display = "block";
-        allSection[1].style.display = "block";
+        
 
     }
 
@@ -146,7 +149,7 @@ function answerScore() {
     }
 
 }
-// after submiting quiz click on show answers to see what the user got right and wrong and also hide all the buttons.
+// After submiting quiz click on show answers to see what the user got right and wrong and also hide all the buttons.
 showAllAnswers.addEventListener('click', function showEverything() {
     for (let i = 0; i < allSection.length; i++) {
 
@@ -161,13 +164,14 @@ showAllAnswers.addEventListener('click', function showEverything() {
 });
 // click event and function showing how many points you got from the quiz based on your clicks and not displaying the intro.
 submitButton.addEventListener('click', function showSubmitArea() {
-    introRules.style.display="none";
-    introHeading.style.display="none";
+    introRules.style.display = "none";
+    introHeading.style.display = "none";
     showQuiz.style.display = "none";
     submitArea.style.display = "block";
-    let showallscore = `Good job ${userName.innerHTML} you answered right on ${currentScore} questions out of 9. Click show quiz to view how you answered`;
+    let showallscore = `Good job ${userName.innerHTML} you answered right on ${currentScore} questions out of 9. Click show quiz to view how you answered or restart to play again`;
     console.log(showallscore);
     document.getElementById('answer-score').innerHTML = showallscore;
+    imageScore.src=imageArray[0]
 
 
 });
@@ -176,3 +180,6 @@ restartButton.addEventListener('click', function restartGame() {
     restartButton = location.reload();
 
 });
+
+// function displaying image depending on score
+
