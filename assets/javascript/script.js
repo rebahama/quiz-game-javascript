@@ -18,7 +18,6 @@ let wrongInput = document.getElementById('wrong-input-text');
 let introRules = document.getElementById('intro-rules')
 let imageScore=document.getElementById('image-score')
 let currentScore = 0;
-
 //Array for holding the answer values
 const answerArray = ['Barack Obama', '15', 'Russia', 'Caspian Sea', '1914', 'Elon Musk', '1945', '29', 'China'];
 const wrongArray = ['Donald Trump', '36', 'China', 'Baikal Lake', '1919', 'Jeff Bezos', '1943', '45', 'India'];
@@ -29,17 +28,10 @@ const imageArray= ['assets/images/gold-medal.jpeg','assets/images/silver-medal.j
 
 nextButton.addEventListener('click', function nextSection() {
     for (let i = 0; i < allSection.length; i++) {
-
-        
             allSection[0].style.display = 'block'; 
             allSection[1].style.display = 'block';
             allSection[0].style.display = 'none';
-            allSection[2].style.display=="block"    
-        
-            
-
-        
-
+            allSection[2].style.display=="block"   
     }
 
 
@@ -155,6 +147,7 @@ showAllAnswers.addEventListener('click', function showEverything() {
 
         allSection[i].style.display = "block";
     }
+
     submitButton.style.display = "none";
     previousButton.style.display = "none";
     nextButton.style.display = "none";
@@ -162,13 +155,13 @@ showAllAnswers.addEventListener('click', function showEverything() {
 
 
 });
-// click event and function showing how many points you got from the quiz based on your clicks and not displaying the intro.
+// click event and function showing how many points you got from the quiz based on your clicks and not displaying the intro after clicking submit
 submitButton.addEventListener('click', function showSubmitArea() {
     introRules.style.display = "none";
     introHeading.style.display = "none";
     showQuiz.style.display = "none";
     submitArea.style.display = "block";
-    let showallscore = `Good job ${userName.innerHTML} you answered right on ${currentScore} questions out of 9. Click show quiz to view how you answered or restart to play again`;
+    let showallscore = `Quiz completed, ${userName.innerHTML} you answered right on ${currentScore} questions out of 9. You have deserved this award below, click show quiz to view how you answered or restart to play again`;
     console.log(showallscore);
     document.getElementById('answer-score').innerHTML = showallscore;
     // if statements that displays images in array based on score from increment
@@ -192,5 +185,4 @@ restartButton.addEventListener('click', function restartGame() {
 
 });
 
-// function displaying image depending on score
 
