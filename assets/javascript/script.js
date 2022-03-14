@@ -171,7 +171,18 @@ submitButton.addEventListener('click', function showSubmitArea() {
     let showallscore = `Good job ${userName.innerHTML} you answered right on ${currentScore} questions out of 9. Click show quiz to view how you answered or restart to play again`;
     console.log(showallscore);
     document.getElementById('answer-score').innerHTML = showallscore;
-    imageScore.src=imageArray[0]
+    // if statements that displays images in array based on score from increment
+    if(currentScore<3){
+    imageScore.src=imageArray[2]
+    }
+    else if(currentScore>=5)
+    {
+        imageScore.src=imageArray[1]
+    }
+    if (currentScore>=6)
+    {
+        imageScore.src=imageArray[0]
+    }
 
 
 });
