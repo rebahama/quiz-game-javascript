@@ -70,6 +70,7 @@ showPlay.addEventListener('click', showArea);
 
 
 function showArea() {
+    let introHeading = document.getElementById('intro-heading');
     let wrongInput = document.getElementById('wrong-input-text');
     let noInputText = "Please write a username before clicking start";
     let emptyField = document.getElementById('input-name').value;
@@ -224,10 +225,8 @@ function showSubmitArea() {
     if (currentScore >= 6) {
         imageScore.src = imageArray[0];
     }
-
-    console.log(window.onload)
-    window.onload = showSubmitArea();
-};
+    
+}
 
 /**
  * After clicking the reset button the quiz runs from the beginning
