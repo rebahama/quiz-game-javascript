@@ -1,19 +1,19 @@
 # QuizIt
-Quizit is a very simple and basic question and answer application. As soon you get to the landingpage a short description will be presented and it will be clear what the page is about. The target audience is basically anyone who is up for a few seconds of a challange. The outcome after visiting the site is that you will maybe have learned a few things that you didn´t know before. It´s a fun way of makeing learning easy and avalible for anyone available.
+Quizit is a very simple and basic question and answer application. As soon you get to the landing page a short description will be presented and it will be clear what the page is about. The target audience is basically anyone who is up for a few seconds of a challange. The outcome after visiting the site is that you will maybe have learned a few things that you didn´t know before. It´s a fun way of makeing learning easy and avalible for anyone available.
 # User stories
 Sometimes as I browse the internet as a user I would like to learn something random in a fun and easy way, the topic is not important it could be anything as long I learn something new.
 
 # Features
 
 ## Front page
-* The heading and front page. This page is the first thing that the user will see when visiting the quiz, it includes a input to use for the user, a button that starts the quiz and on the bottom a short description on how to play the quiz. ![Frontpage](docs/frontpage-1.png)
+* The heading and front page. This page is the first thing that the user will see when visiting the quiz, it includes a inputfield to use for the user, a button that starts the quiz and on the bottom a short description on how to play the quiz. ![Frontpage](docs/frontpage-1.png)
 
 ## Username and Play button
 * Here the user can create a username for themself, and when they have created a username the user will be able to click on the playbutton to start the quiz.
  ![Username and play](docs/front-page-2.png)
 
  ## Display message in header
-* Here the user will be warned when the "username" input field is left empty, the user will also recieve and alert warning message to inform that the input filed need to be filled in order to able to click play and continue.
+* Here the user will be warned when the "username" input field is left empty, the user will also receive and alert warning message to inform that the input filed need to be filled in order to able to click play and continue.
 
 ![Message display when not writeing input in the user name](docs/front-page-3.png)
 
@@ -31,11 +31,11 @@ Sometimes as I browse the internet as a user I would like to learn something ran
 ![Submit area](docs/front-page-7.png)
 
 
-* When the user gets above 3 questions right after clicking submit this picture will with a "silver" present. 
+* When the user gets above 3 questions right after clicking submit this picture will appear with a "silver" present. 
 ![Score above 3](docs/front-page-8.png)
 
 
-* When the user gets above 6 questions right after clicking submit this picture will with a "gold" present. 
+* When the user gets above 6 questions right after clicking submit this picture will appear with a "gold" present. 
 ![Score above 6](docs/front-page-9.png)
 
 * The show answers button will reveal the whole quiz so that the user can see what questions was right or wrong. The restart quiz will take the user back to the home front page and the user will be able to play the quiz again with a new username.
@@ -49,13 +49,13 @@ In the future I would like to include more questions to the quiz, also a timer s
 
 ## Technology
 
-The technology to create the strucutre of the page with:
+The technology to create the structure of the page was created with:
 * HTML.
 
 The styling of the page was created with:
 * CSS.
 
-The logic behind the page like caluclating right answers and button inputs was created with:
+The logic behind the page like calculating right answers and button inputs was created with:
 
 * Javascript
 
@@ -68,7 +68,7 @@ The deployment of the site was created with:
 ## Testing
 * The site was tested with three diffrent browsers, Brave, Google chrome and Microsoft Edge.
 
-* I confirmed that error message was displayed when the user clicks on previous button on the first page and next button on the last page.
+* I confirmed that the error message was displayed when the user clicks on previous button on the first page and next button on the last page.
 
 * I confirmed that the user must write a username before being able to start the quiz.
 
@@ -95,9 +95,15 @@ Only error that I got was that I forgot to include an alt in my img tag.
 
  I also got a warning saynig:"Missing "use strict" statement". In my functions, so I included a 'use strict'; in my functions to make that warning disappear.
 
-* After fixing all the error above I validated once more all the files to confirm that there is no warnings and all the files were good.
+ Following metrics was returned from the Javascirpt file:
+ * There are 8 functions in this file.
+ * Largest function has 45 statements in it, while the median is 7.5.
+ * The most complex function has a cyclomatic complexity value of 19 while the median is 3.
+
+
+* After fixing all the errors above I validated once more all the files to confirm that there is no warnings and all the files were good.
 ## Lighthouse Score
-* I ran the page in the devtools and checked with lighthouse my accessibility on the page and it all looked good.
+* I ran the page in the chrome devtools and checked with lighthouse my accessibility scire on the page and it all looked good.
 ![Aftersubmit area](docs/lighthouse-score.png)
 
 # Unfixed bugs
@@ -118,7 +124,7 @@ To acess the source code in Gitpod.
 * After clicking the green button type: "python3 -m http.server" to run the terminal in "bash".
 * Click on "open browser" to view the page.
 
-Webste link is here: [QuizIT](https://rebahama.github.io/quiz-game-javascript/).
+Website link is here: [QuizIT](https://rebahama.github.io/quiz-game-javascript/).
 
 # Credits
 ## Content
@@ -127,10 +133,7 @@ Webste link is here: [QuizIT](https://rebahama.github.io/quiz-game-javascript/).
 * Fonts are from Google: [Google fonts](https://fonts.google.com/)
 
 ## Media
-* All the pictures was taken from: [Picures](https://www.pexels.com/sv-se/)
-
-
-
+* All the pictures was taken from Pexels: [Picures](https://www.pexels.com/sv-se/)
 
 
 
