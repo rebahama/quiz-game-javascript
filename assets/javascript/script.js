@@ -28,7 +28,8 @@ const imageArray = ['assets/images/gold-medal.jpg', 'assets/images/silver-medal.
  */
 
 nextButton.addEventListener('click', nextSection);
-let errorMessage=document.getElementById('error-message');
+let errorMessage = document.getElementById('error-message');
+
 function nextSection() {
     if (currentSection === firstArea) {
         firstArea.style.display = 'none';
@@ -37,21 +38,21 @@ function nextSection() {
     } else if (currentSection === secondArea) {
         secondArea.style.display = 'none';
         thirdArea.style.display = 'block';
-        
+
         currentSection = thirdArea;
     } else if (currentSection === thirdArea) {
-        errorMessage.style.display="block";
-        errorMessage.innerHTML="If you are done please click Submit to continue the quiz"
+        errorMessage.style.display = "block";
+        errorMessage.innerHTML = "If you are done please click Submit to continue the quiz"
     }
-    
-    
+
+
 
 }
 
 previousButton.addEventListener('click', previousBack);
 
 function previousBack() {
-let errorMessage=document.getElementById('error-message');
+    let errorMessage = document.getElementById('error-message');
 
 
     if (currentSection === thirdArea) {
@@ -62,18 +63,17 @@ let errorMessage=document.getElementById('error-message');
         secondArea.style.display = "none";
         firstArea.style.display = "block";
         currentSection = firstArea;
-    }
-    else{
-        errorMessage.innerHTML="Please click next to continue to the next page"
-        errorMessage.style.display="block";
+    } else {
+        errorMessage.innerHTML = "Please click next to continue to the next page"
+        errorMessage.style.display = "block";
     }
 
 }
 
 
-    
 
-    
+
+
 
 /**
  * Prevents the game from starting if the user leaves the input field empty.
@@ -96,7 +96,7 @@ function showArea() {
 
     }
 
-    
+
     introHeading.style.display = "none";
 
 }
@@ -199,13 +199,15 @@ function answerScore() {
 showAllAnswers.addEventListener('click', showEverything);
 
 function showEverything() {
+
     for (let i = 0; i < allSection.length; i++) {
 
         allSection[i].style.display = "block";
     }
-
+    let errorMessage = document.getElementById('error-message');
+    errorMessage.style.display = "none";
     submitButton.style.display = "none";
-    previousButton.style.display="none"
+    previousButton.style.display = "none"
     nextButton.style.display = "none";
     showQuiz.style.display = "block";
 
@@ -237,7 +239,7 @@ function showSubmitArea() {
     if (currentScore >= 6) {
         imageScore.src = imageArray[0];
     }
-    
+
 }
 
 
