@@ -20,7 +20,7 @@ const wrongArray = ['Donald Trump', '36', 'China', 'Baikal Lake', '1919', 'Jeff 
 // Array for holding the diffrent div elements in html document
 const allSection = [firstArea, secondArea, thirdArea];
 //array for holding images
-const imageArray = ['assets/images/gold-medal.jpeg', 'assets/images/silver-medal.jpeg', 'assets/images/sad-smiley.jpeg'];
+const imageArray = ['assets/images/gold-medal.jpg', 'assets/images/silver-medal.jpg', 'assets/images/sad-smiley.jpeg'];
 
 
 /**
@@ -28,7 +28,7 @@ const imageArray = ['assets/images/gold-medal.jpeg', 'assets/images/silver-medal
  */
 
 nextButton.addEventListener('click', nextSection);
-
+let errorMessage=document.getElementById('error-message');
 function nextSection() {
     if (currentSection === firstArea) {
         firstArea.style.display = 'none';
@@ -37,16 +37,22 @@ function nextSection() {
     } else if (currentSection === secondArea) {
         secondArea.style.display = 'none';
         thirdArea.style.display = 'block';
+        
         currentSection = thirdArea;
     } else if (currentSection === thirdArea) {
-        console.log("Invalid case");
+        errorMessage.style.display="block";
+        errorMessage.innerHTML="If you are done please click Submit to continue the quiz"
     }
+    
+    
 
 }
 
 previousButton.addEventListener('click', previousBack);
 
 function previousBack() {
+let errorMessage=document.getElementById('error-message');
+
 
     if (currentSection === thirdArea) {
         thirdArea.style.display = "none";
@@ -57,11 +63,17 @@ function previousBack() {
         firstArea.style.display = "block";
         currentSection = firstArea;
     }
+    else{
+        errorMessage.innerHTML="Please click next to continue to the next page"
+        errorMessage.style.display="block";
+    }
 
 }
 
 
-answerScore();
+    
+
+    
 
 /**
  * Prevents the game from starting if the user leaves the input field empty.
@@ -79,11 +91,12 @@ function showArea() {
         alert('Please write a username before clicking play');
         return false;
     } else if (emptyField) {
-
         showQuiz.style.display = "block";
         showFlex.style.display = "none";
 
     }
+
+    
     introHeading.style.display = "none";
 
 }
@@ -192,10 +205,9 @@ function showEverything() {
     }
 
     submitButton.style.display = "none";
-    previousButton.style.display = "none";
+    previousButton.style.display="none"
     nextButton.style.display = "none";
     showQuiz.style.display = "block";
-
 
 }
 
@@ -227,6 +239,7 @@ function showSubmitArea() {
     }
     
 }
+
 
 /**
  * After clicking the reset button the quiz runs from the beginning
