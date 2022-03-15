@@ -1,5 +1,4 @@
 /*jshint esversion: 6 */
-
 //variabels to access the id in the html file.
 let showQuiz = document.getElementById('quiz-form');
 let showPlay = document.getElementById('play-btn');
@@ -23,8 +22,6 @@ const wrongArray = ['Donald Trump', '36', 'China', 'Baikal Lake', '1919', 'Jeff 
 const allSection = [firstArea, secondArea, thirdArea];
 //array for holding images
 const imageArray = ['assets/images/gold-medal.jpg', 'assets/images/silver-medal.jpg', 'assets/images/sad-smiley.jpeg'];
-
-
 /**
  * The next and previous button that shows diffrent section divs in the same html form
  */
@@ -49,8 +46,6 @@ function nextSection() {
         errorMessage.innerHTML = "If you are done please click Submit to continue the quiz"
     }
 
-
-
 }
 
 previousButton.addEventListener('click', previousBack);
@@ -74,12 +69,10 @@ function previousBack() {
     }
 
 }
-
 /**
  * Prevents the game from starting if the user leaves the input field empty.
  */
 showPlay.addEventListener('click', showArea);
-
 
 function showArea() {
     'use strict';
@@ -100,7 +93,6 @@ function showArea() {
     introHeading.style.display = "none";
 
 }
-
 /**
  * Puts the value from the field the user writes in and puts that value to a element in html affter clicking play button
  */
@@ -211,9 +203,7 @@ function showEverything() {
     nextButton.style.display = "none";
     showQuiz.style.display = "block";
 
-
 }
-
 /**
  * After clicking submit button hideing header and intro rules and displaying a message with your name and score. Also displaying an image depanding on how many right answers you get.
  */
@@ -228,7 +218,7 @@ function showSubmitArea() {
     introHeading.style.display = "none";
     showQuiz.style.display = "none";
     submitArea.style.display = "block";
-    let showallscore = `Quiz completed, ${userName.innerHTML} you answered right on ${currentScore} questions out of 9. You have deserved this award below, click show quiz to view how you answered or restart to play again`;
+    let showallscore = `Quiz completed, ${userName.innerHTML} you answered right on ${currentScore} questions out of 9. You have deserved this award below, click show answers to view how you answered or restart to play again`;
     console.log(showallscore);
     document.getElementById('answer-score').innerHTML = showallscore;
     // if statements that displays images in array based on score from increment
@@ -243,8 +233,6 @@ function showSubmitArea() {
     }
 
 }
-
-
 /**
  * After clicking the reset button the quiz runs from the beginning
  */

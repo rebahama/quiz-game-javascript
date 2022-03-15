@@ -154,6 +154,8 @@ body {
 
 #image-score{
     width: 20%;
+    border-radius: 10%;
+    border: 5px #000000 solid;
 }
 /* style error message*/
 #error-message{
