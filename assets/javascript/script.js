@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 //variabels to access the id in the html file.
 let showQuiz = document.getElementById('quiz-form');
 let showPlay = document.getElementById('play-btn');
@@ -27,8 +29,10 @@ const imageArray = ['assets/images/gold-medal.jpg', 'assets/images/silver-medal.
  * The next and previous button that shows diffrent section divs in the same html form
  */
 
+
 nextButton.addEventListener('click', nextSection);
 let errorMessage = document.getElementById('error-message');
+'use strict';
 
 function nextSection() {
     if (currentSection === firstArea) {
@@ -50,6 +54,7 @@ function nextSection() {
 }
 
 previousButton.addEventListener('click', previousBack);
+'use strict';
 
 function previousBack() {
     let errorMessage = document.getElementById('error-message');
@@ -70,11 +75,6 @@ function previousBack() {
 
 }
 
-
-
-
-
-
 /**
  * Prevents the game from starting if the user leaves the input field empty.
  */
@@ -82,6 +82,7 @@ showPlay.addEventListener('click', showArea);
 
 
 function showArea() {
+    'use strict';
     let introHeading = document.getElementById('intro-heading');
     let wrongInput = document.getElementById('wrong-input-text');
     let noInputText = "Please write a username before clicking start";
@@ -91,12 +92,11 @@ function showArea() {
         alert('Please write a username before clicking play');
         return false;
     } else if (emptyField) {
+
         showQuiz.style.display = "block";
         showFlex.style.display = "none";
 
     }
-
-
     introHeading.style.display = "none";
 
 }
@@ -107,7 +107,7 @@ function showArea() {
 showPlay.addEventListener('click', receiveUserName);
 
 function receiveUserName() {
-
+    'use strict';
     let reciveInput = document.getElementById('input-name').value;
     userName.innerHTML = reciveInput;
 
@@ -115,9 +115,10 @@ function receiveUserName() {
 /**
  *  Takes value from radibutton in html and compares it to an array and increments score if the score is right.
  */
+answerScore();
 
 function answerScore() {
-
+    'use strict';
     let question1 = document.quiz.question1.value;
     let question2 = document.quiz.question2.value;
     let question3 = document.quiz.question3.value;
@@ -199,17 +200,17 @@ function answerScore() {
 showAllAnswers.addEventListener('click', showEverything);
 
 function showEverything() {
-
+    'use strict';
     for (let i = 0; i < allSection.length; i++) {
 
         allSection[i].style.display = "block";
     }
-    let errorMessage = document.getElementById('error-message');
-    errorMessage.style.display = "none";
+
     submitButton.style.display = "none";
-    previousButton.style.display = "none"
+    previousButton.style.display = "none";
     nextButton.style.display = "none";
     showQuiz.style.display = "block";
+
 
 }
 
@@ -219,6 +220,7 @@ function showEverything() {
 submitButton.addEventListener('click', showSubmitArea);
 
 function showSubmitArea() {
+    'use strict';
     let introHeading = document.getElementById('intro-heading');
     let introRules = document.getElementById('intro-rules');
     let submitArea = document.getElementById('submit-area');
@@ -249,5 +251,6 @@ function showSubmitArea() {
 restartButton.addEventListener('click', restartGame);
 
 function restartGame() {
+    'use strict';
     restartButton = location.reload();
 }
