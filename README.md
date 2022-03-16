@@ -1,5 +1,6 @@
 # QuizIt
 Quizit is a very simple and basic question and answer application. As soon you get to the landing page a short description will be presented and it will be clear what the page is about. The target audience is basically anyone who is up for a few seconds of a challange. The outcome after visiting the site is that you will maybe have learned a few things that you didn´t know before. It´s a fun way of makeing learning easy and avalible for anyone available.
+![Responsiv image frontpage](docs/responsiv-image.png)
 # User stories
 Sometimes as I browse the internet as a user I would like to learn something random in a fun and easy way, the topic is not important it could be anything as long I learn something new.
 
@@ -74,8 +75,18 @@ The deployment of the site was created with:
 
 * I confirmed that the images are diffrent based on the score that the user recieves after clicking submit.
 
-# Supported screens
-sasa
+# Supported screens 
+I used this site [Am I responsiv?](http://ami.responsivedesign.is/#) to test the quiz on diffrent screens. In chrome devtools I also tested diffrent screen sizes such as:
+
+* Ipad Air/Ipad Mini.
+
+* Iphone 4/6/7/XR/12 and 12 pro.
+
+* Samsung Galaxy S8/S20
+
+* Nesthub Max
+
+* Pixel 5
 
 # Bugs
 ## Solved bugs
