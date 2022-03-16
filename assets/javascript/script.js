@@ -235,6 +235,7 @@ submitButton.addEventListener('click', showSubmitArea);
 
 function showSubmitArea() {
     'use strict';
+    alert('You have submitted the quiz')
     let introHeading = document.getElementById('intro-heading');
     let introRules = document.getElementById('intro-rules');
     let submitArea = document.getElementById('submit-area');

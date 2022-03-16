@@ -218,12 +218,16 @@ body {
         width: 74%;
         margin: auto;
         margin-top: 10%;
+        font-size: 110%;
     }
 
     #btns-container {
         padding: 10%;
         display: flex;
         flex-direction: column;
+    }
+    #play-btn, #next-area-btn, #submit-btn, #previous-area-btn {
+        margin-top: 8%;
     }
 
     #image-score {
