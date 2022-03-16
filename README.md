@@ -82,11 +82,11 @@ I used this site [Am I responsiv?](http://ami.responsivedesign.is/#) to test the
 
 * Iphone 4/6/7/XR/12 and 12 pro.
 
-* Samsung Galaxy S8/S20
+* Samsung Galaxy S8/S20.
 
-* Nesthub Max
+* Nesthub Max.
 
-* Pixel 5
+* Pixel 5.
 
 # Bugs
 ## Solved bugs
