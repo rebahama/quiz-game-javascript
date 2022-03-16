@@ -26,8 +26,6 @@ const imageArray = ['assets/images/gold-medal.jpg', 'assets/images/silver-medal.
 /**
  * The next and previous button that shows diffrent section divs in the same html form
  */
-
-
 nextButton.addEventListener('click', nextSection);
 let errorMessage = document.getElementById('error-message');
 
@@ -36,7 +34,7 @@ function nextSection() {
     'use strict';
     if (currentSection === firstArea) {
         firstArea.style.display = 'none';
-       
+
         secondArea.style.display = 'block';
         currentSection = secondArea;
     } else if (currentSection === secondArea) {
@@ -46,14 +44,12 @@ function nextSection() {
         currentSection = thirdArea;
     } else if (currentSection === thirdArea) {
         errorMessage.style.display = "block";
-        
+
         errorMessage.innerHTML = "If you are done please click Submit to finish the quiz";
     }
 
 }
-
 previousButton.addEventListener('click', previousBack);
-
 
 function previousBack() {
     'use strict';
@@ -77,6 +73,7 @@ function previousBack() {
 /**
  * Prevents the game from starting if the user leaves the input field empty.
  */
+
 showPlay.addEventListener('click', showArea);
 
 function showArea() {
@@ -114,7 +111,6 @@ function receiveUserName() {
 /**
  *  Takes value from radiobutton in html and compares it to an array and increments score if the score is right.
  */
-
 
 function answerScore() {
     'use strict';
@@ -237,7 +233,7 @@ submitButton.addEventListener('click', showSubmitArea);
 
 function showSubmitArea() {
     'use strict';
-    alert('You have submitted the quiz')
+    alert('You have submitted the quiz');
     let introHeading = document.getElementById('intro-heading');
     let introRules = document.getElementById('intro-rules');
     let submitArea = document.getElementById('submit-area');
@@ -245,7 +241,6 @@ function showSubmitArea() {
     introHeading.style.display = "none";
     showQuiz.style.display = "none";
     submitArea.style.display = "block";
-
     let showallscore = `Quiz completed, ${userName.innerHTML} you answered right on ${currentScore}` +
         ` questions out of 9. You have deserved this award below, click show answers to view how you answered or restart to play again`;
     console.log(showallscore);
@@ -268,5 +263,6 @@ restartButton.addEventListener('click', restartGame);
 
 function restartGame() {
     'use strict';
+    answerScore();
     restartButton = location.reload();
 }
