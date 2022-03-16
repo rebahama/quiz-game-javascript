@@ -2,7 +2,13 @@
 Quizit is a very simple and basic question and answer application. As soon you get to the landing page a short description will be presented and it will be clear what the page is about. The target audience is basically anyone who is up for a few seconds of a challange. The outcome after visiting the site is that you will maybe have learned a few things that you didn´t know before. It´s a fun way of makeing learning easy and avalible for anyone available.
 ![Responsiv image frontpage](docs/responsiv-image.png)
 # User stories
-Sometimes as I browse the internet as a user I would like to learn something random in a fun and easy way, the topic is not important it could be anything as long I learn something new.
+* Sometimes as I browse the internet as a user I would like to learn something random in a fun and easy way, the topic is not important it could be anything as long I learn something new.
+* I would like to be able to create a username where my name will be displayed.
+
+* I would like to know how many points I got after submitting the quiz.
+
+* I would like to know what questions that I answered were right and what questions were wrong.
+
 
 # Features
 
@@ -28,16 +34,16 @@ Sometimes as I browse the internet as a user I would like to learn something ran
 * On the last page if the user clicks next then a message above will appear telling the user to submit the quiz.
 ![The quiz](docs/front-page-6.png)
 ## Submit area
-* After the user clicks submit the whole quiz will disappear and get access to a new area called the submit area. On this page the users name will be displayed along with how many questions the user got right. A picture will also appear depending on how many questions the user got right.
+* After the user clicks submit the whole quiz will disappear and get access to a new area called the submit area. On this page the users name will be displayed along with how many questions the user got right. A picture will also appear depending on how many questions the user got right. If the score is less than 5 image below will appear.
 ![Submit area](docs/front-page-7.png)
 
 
-* When the user gets above 3 questions right after clicking submit this picture will appear with a "silver" present. 
-![Score above 3](docs/front-page-8.png)
+* When the user gets 5 questions right after clicking submit this picture will appear with a "silver" present. 
+![Score 5](docs/front-page-8.png)
 
 
-* When the user gets above 6 questions right after clicking submit this picture will appear with a "gold" present. 
-![Score above 6](docs/front-page-9.png)
+* When the user gets above 5 questions right after clicking submit this picture will appear with a "gold" present. 
+![Score above 5](docs/front-page-9.png)
 
 * The show answers button will reveal the whole quiz so that the user can see what questions was right or wrong. The restart quiz will take the user back to the home front page and the user will be able to play the quiz again with a new username.
 ![Submitarea buttons](docs/front-page-10.png)

@@ -33,9 +33,10 @@ let errorMessage = document.getElementById('error-message');
 
 
 function nextSection() {
-  'use strict';
+    'use strict';
     if (currentSection === firstArea) {
         firstArea.style.display = 'none';
+       
         secondArea.style.display = 'block';
         currentSection = secondArea;
     } else if (currentSection === secondArea) {
@@ -45,6 +46,7 @@ function nextSection() {
         currentSection = thirdArea;
     } else if (currentSection === thirdArea) {
         errorMessage.style.display = "block";
+        
         errorMessage.innerHTML = "If you are done please click Submit to finish the quiz";
     }
 
@@ -53,8 +55,8 @@ function nextSection() {
 previousButton.addEventListener('click', previousBack);
 
 
-function previousBack(){
-'use strict';  
+function previousBack() {
+    'use strict';
     let errorMessage = document.getElementById('error-message');
 
 
@@ -84,7 +86,7 @@ function showArea() {
     let wrongInput = document.getElementById('wrong-input-text');
     let noInputText = "Please write a username before clicking start";
     let emptyField = document.getElementById('input-name').value;
-    if (emptyField == "") {
+    if (emptyField === "") {
         wrongInput.innerHTML = noInputText;
         alert('Please write a username before clicking play');
         return false;
@@ -243,16 +245,18 @@ function showSubmitArea() {
     introHeading.style.display = "none";
     showQuiz.style.display = "none";
     submitArea.style.display = "block";
-    let showallscore = `Quiz completed, ${userName.innerHTML} you answered right on ${currentScore} questions out of 9. You have deserved this award below, click show answers to view how you answered or restart to play again`;
+
+    let showallscore = `Quiz completed, ${userName.innerHTML} you answered right on ${currentScore}` +
+        ` questions out of 9. You have deserved this award below, click show answers to view how you answered or restart to play again`;
     console.log(showallscore);
     document.getElementById('answer-score').innerHTML = showallscore;
     // if statements that displays images in array based on score from increment
     let imageScore = document.getElementById('image-score');
-    if (currentScore <=4) {
+    if (currentScore <= 4) {
         imageScore.src = imageArray[2];
     } else if (currentScore === 5) {
         imageScore.src = imageArray[1];
-    } else{ 
+    } else {
         imageScore.src = imageArray[0];
     }
 
