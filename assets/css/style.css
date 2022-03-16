@@ -56,9 +56,13 @@ body {
     text-align: center;
     width: 100%;
     padding: 2%;
-    position: absolute;
-    bottom: -0;
     background-color: black;
+}
+#intro-footer{
+    margin-top: 5%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
 }
 
 /*style the buttons*/
@@ -219,7 +223,7 @@ body {
     #btns-container {
         padding: 10%;
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
     #image-score {
@@ -231,6 +235,7 @@ body {
     }
 
     #inner-flex-1 {
+        height: 290px;
         flex-direction: column;
     }
 
@@ -239,26 +244,18 @@ body {
     }
 
     #intro-rules {
-        padding: 0%;
-        position: absolute;
-        bottom: -10%;
+        padding: 0%; 
         font-size: 110%;
-    }
-
-    #inner-flex {
-        height: 300px;
     }
 
 }
 /*For screen below 330px*/
 @media screen and (max-width: 330px) {
     #inner-flex-1 {
-        height: 280px;
+        height: 270px;
     }
 
     #intro-rules {
         font-size: 90%;
-        position: absolute;
-        bottom: -10%;
     }
 }
