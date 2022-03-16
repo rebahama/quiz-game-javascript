@@ -22,6 +22,7 @@ const wrongArray = ['Donald Trump', '36', 'China', 'Baikal Lake', '1919', 'Jeff 
 const allSection = [firstArea, secondArea, thirdArea];
 //array for holding images
 const imageArray = ['assets/images/gold-medal.jpg', 'assets/images/silver-medal.jpg', 'assets/images/sad-smiley.jpeg'];
+
 /**
  * The next and previous button that shows diffrent section divs in the same html form
  */
@@ -43,7 +44,7 @@ function nextSection() {
         currentSection = thirdArea;
     } else if (currentSection === thirdArea) {
         errorMessage.style.display = "block";
-        errorMessage.innerHTML = "If you are done please click Submit to continue the quiz"
+        errorMessage.innerHTML = "If you are done please click Submit to finish the quiz"
     }
 
 }
@@ -76,6 +77,7 @@ showPlay.addEventListener('click', showArea);
 
 function showArea() {
     'use strict';
+    let introRules = document.getElementById('intro-rules');
     let introHeading = document.getElementById('intro-heading');
     let wrongInput = document.getElementById('wrong-input-text');
     let noInputText = "Please write a username before clicking start";
@@ -91,6 +93,7 @@ function showArea() {
 
     }
     introHeading.style.display = "none";
+    introRules.style.display="none";
 
 }
 /**
@@ -105,83 +108,103 @@ function receiveUserName() {
 
 }
 /**
- *  Takes value from radibutton in html and compares it to an array and increments score if the score is right.
+ *  Takes value from radiobutton in html and compares it to an array and increments score if the score is right.
  */
 answerScore();
 
 function answerScore() {
     'use strict';
-    let question1 = document.quiz.question1.value;
-    let question2 = document.quiz.question2.value;
-    let question3 = document.quiz.question3.value;
-    let question4 = document.quiz.question4.value;
-    let question5 = document.quiz.question5.value;
-    let question6 = document.quiz.question6.value;
-    let question7 = document.quiz.question7.value;
-    let question8 = document.quiz.question8.value;
-    let question9 = document.quiz.question9.value;
+    let errorMessage = document.getElementById('error-message');
+    let questionOne = document.quiz.question1.value;
+    let questionTwo = document.quiz.question2.value;
+    let questionThree = document.quiz.question3.value;
+    let questionFour = document.quiz.question4.value;
+    let questionFive = document.quiz.question5.value;
+    let questionSix = document.quiz.question6.value;
+    let questionSeven = document.quiz.question7.value;
+    let questionEight = document.quiz.question8.value;
+    let questionNine = document.quiz.question9.value;
 
-    // if the answer is wrong the backgorund will turn red, if its correct the answer will turn green
-    if (question1 === answerArray[0]) {
+    // if the answer is wrong the backgorund will turn red, if its correct the answer will turn green, if neither conditon is met then a error message will display and tell the user to contact support
+    if (questionOne === answerArray[0]) {
         radioBackground[0].style.backgroundColor = "green";
         currentScore++;
-    } else if (question1 === wrongArray[0]) {
+    } else if (questionOne === wrongArray[0]) {
         radioBackground[1].style.backgroundColor = "red";
     }
-    if (question2 === answerArray[1]) {
+    else{
+        errorMessage.innerHTML="Error message:Q1: please contact support at wiri@hotmail.se"
+    }
+    if (questionTwo === answerArray[1]) {
         radioBackground[2].style.backgroundColor = "green";
         currentScore++;
-    } else if (question2 === wrongArray[1]) {
+    } else if (questionTwo === wrongArray[1]) {
         radioBackground[3].style.backgroundColor = "red";
+    }else{
+        errorMessage.innerHTML="Error message:Q2: please contact support at wiri@hotmail.se"
     }
 
-    if (question3 === answerArray[2]) {
+    if (questionThree === answerArray[2]) {
         radioBackground[5].style.backgroundColor = "green";
         currentScore++;
-    } else if (question3 === wrongArray[2]) {
+    } else if (questionThree === wrongArray[2]) {
         radioBackground[4].style.backgroundColor = "red";
+    }else{
+        errorMessage.innerHTML="Error message:Q3: please contact support at wiri@hotmail.se"
     }
 
-    if (question4 === answerArray[3]) {
+    if (questionFour === answerArray[3]) {
         radioBackground[6].style.backgroundColor = "green";
         currentScore++;
-    } else if (question4 === wrongArray[3]) {
+    } else if (questionFour === wrongArray[3]) {
         radioBackground[7].style.backgroundColor = "red";
+    }else{
+        errorMessage.innerHTML="Error message:Q4: please contact support at wiri@hotmail.se"
     }
 
-    if (question5 === answerArray[4]) {
+    if (questionFive === answerArray[4]) {
         radioBackground[9].style.backgroundColor = "green";
         currentScore++;
-    } else if (question5 === wrongArray[4]) {
+    } else if (questionFive === wrongArray[4]) {
         radioBackground[8].style.backgroundColor = "red";
+    }else{
+        errorMessage.innerHTML="Error message:Q5: please contact support at wiri@hotmail.se"
     }
 
-    if (question6 === answerArray[5]) {
+    if (questionSix === answerArray[5]) {
         radioBackground[11].style.backgroundColor = "green";
         currentScore++;
-    } else if (question6 === wrongArray[5]) {
+    } else if (questionSix === wrongArray[5]) {
         radioBackground[10].style.backgroundColor = "red";
+    }else{
+        errorMessage.innerHTML="Error message:Q6: please contact support at wiri@hotmail.se"
     }
 
-    if (question7 === answerArray[6]) {
+    if (questionSeven === answerArray[6]) {
         radioBackground[12].style.backgroundColor = "green";
         currentScore++;
-    } else if (question7 === wrongArray[6]) {
+    } else if (questionSeven === wrongArray[6]) {
         radioBackground[13].style.backgroundColor = "red";
+    }else{
+        errorMessage.innerHTML="Error message:Q7: please contact support at wiri@hotmail.se"
     }
 
-    if (question8 === answerArray[7]) {
+    if (questionEight === answerArray[7]) {
         radioBackground[14].style.backgroundColor = "green";
         currentScore++;
-    } else if (question8 === wrongArray[7]) {
+    } else if (questionEight === wrongArray[7]) {
         radioBackground[15].style.backgroundColor = "red";
+    }else{
+        errorMessage.innerHTML="Error message:Q8: please contact support at wiri@hotmail.se"
     }
 
-    if (question9 === answerArray[8]) {
+    if (questionNine === answerArray[8]) {
         radioBackground[17].style.backgroundColor = "green";
         currentScore++;
-    } else if (question9 === wrongArray[8]) {
+    } else if (questionNine === wrongArray[8]) {
         radioBackground[16].style.backgroundColor = "red";
+    }else{
+        errorMessage.innerHTML="Error message:Q9: please contact support at wiri@hotmail.se"
     }
 
 }

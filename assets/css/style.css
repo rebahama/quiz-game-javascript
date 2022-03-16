@@ -107,7 +107,7 @@ body {
 #quiz-form {
     color: #000000;
     width: 50%;
-    margin-top: 7%;
+    margin-top: 10%;
     margin-left: 28%;
     border: 10px #000000 solid;
     padding: 1%;
@@ -168,4 +168,30 @@ body {
 /*style the page index*/
 .page{
     text-align: right;
+}
+/* for screen below 830 px*/
+@media screen and (max-width: 830px) {
+#inner-flex-1{
+    min-width: 60%;
+    margin-top: 12%;
+}
+#play-btn{
+    padding: 9px 20px;
+}
+#quiz-form{
+    min-width: 60%;
+    margin-top: 35%;
+    margin-left: 21%;
+
+}
+#image-score{
+    min-width: 35%;
+}
+#intro-rules{
+    padding: 0%;
+    position: absolute;
+    bottom: 0;
+}
+
+
 }
