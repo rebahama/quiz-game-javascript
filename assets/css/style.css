@@ -241,7 +241,7 @@ body {
     #intro-rules {
         padding: 0%;
         position: absolute;
-        bottom: 0;
+        bottom: -10%;
         font-size: 110%;
     }
 
