@@ -172,17 +172,20 @@ body {
 /* for screen below 830 px*/
 @media screen and (max-width: 830px) {
 #inner-flex-1{
-    min-width: 60%;
-    margin-top: 12%;
+    min-width: 70%;
+    margin-top: 4%;
 }
 #play-btn{
     padding: 9px 20px;
 }
 #quiz-form{
-    min-width: 60%;
-    margin-top: 35%;
-    margin-left: 21%;
+    min-width: 70%;
+    margin-top: 7%;
+    margin-left: 16%;
 
+}
+#input-name{
+    width: 35%;
 }
 #image-score{
     min-width: 35%;
@@ -192,6 +195,40 @@ body {
     position: absolute;
     bottom: 0;
 }
-
+}
+/*For screen below 660px*/
+@media screen and (max-width: 660px){
+    #quiz-form{
+        padding:2%;
+        width: 74%;
+        margin: auto;
+        margin-top: 10%;
+    }
+    #btns-container{
+        padding: 10%;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    #image-score {
+        min-width: 45%;
+    }
+    #input-name{
+        width: 60%;
+    }
+    #inner-flex-1{
+        flex-direction: column;
+    }
+    #answer-score{
+        font-size: 115%
+    }
+    #intro-rules{
+        padding: 0%;
+        position: absolute;
+        bottom: 0;
+        font-size: 110%;
+    }
+    #inner-flex{
+        height: 330px;
+    }
 
 }
