@@ -30,9 +30,10 @@ const imageArray = ['assets/images/gold-medal.jpg', 'assets/images/silver-medal.
 
 nextButton.addEventListener('click', nextSection);
 let errorMessage = document.getElementById('error-message');
-'use strict';
+
 
 function nextSection() {
+  'use strict';
     if (currentSection === firstArea) {
         firstArea.style.display = 'none';
         secondArea.style.display = 'block';
@@ -44,15 +45,16 @@ function nextSection() {
         currentSection = thirdArea;
     } else if (currentSection === thirdArea) {
         errorMessage.style.display = "block";
-        errorMessage.innerHTML = "If you are done please click Submit to finish the quiz"
+        errorMessage.innerHTML = "If you are done please click Submit to finish the quiz";
     }
 
 }
 
 previousButton.addEventListener('click', previousBack);
-'use strict';
 
-function previousBack() {
+
+function previousBack(){
+'use strict';  
     let errorMessage = document.getElementById('error-message');
 
 
@@ -65,7 +67,7 @@ function previousBack() {
         firstArea.style.display = "block";
         currentSection = firstArea;
     } else {
-        errorMessage.innerHTML = "Please click next to continue to the next page"
+        errorMessage.innerHTML = "Please click next to continue to the next page";
         errorMessage.style.display = "block";
     }
 
@@ -93,7 +95,7 @@ function showArea() {
 
     }
     introHeading.style.display = "none";
-    introRules.style.display="none";
+    introRules.style.display = "none";
 
 }
 /**
@@ -131,17 +133,16 @@ function answerScore() {
         currentScore++;
     } else if (questionOne === wrongArray[0]) {
         radioBackground[1].style.backgroundColor = "red";
-    }
-    else{
-        errorMessage.innerHTML="Error message:Q1: please contact support at wiri@hotmail.se"
+    } else {
+        errorMessage.innerHTML = "Error message:Q1: please contact support at wiri@hotmail.se";
     }
     if (questionTwo === answerArray[1]) {
         radioBackground[2].style.backgroundColor = "green";
         currentScore++;
     } else if (questionTwo === wrongArray[1]) {
         radioBackground[3].style.backgroundColor = "red";
-    }else{
-        errorMessage.innerHTML="Error message:Q2: please contact support at wiri@hotmail.se"
+    } else {
+        errorMessage.innerHTML = "Error message:Q2: please contact support at wiri@hotmail.se";
     }
 
     if (questionThree === answerArray[2]) {
@@ -149,8 +150,8 @@ function answerScore() {
         currentScore++;
     } else if (questionThree === wrongArray[2]) {
         radioBackground[4].style.backgroundColor = "red";
-    }else{
-        errorMessage.innerHTML="Error message:Q3: please contact support at wiri@hotmail.se"
+    } else {
+        errorMessage.innerHTML = "Error message:Q3: please contact support at wiri@hotmail.se";
     }
 
     if (questionFour === answerArray[3]) {
@@ -158,8 +159,8 @@ function answerScore() {
         currentScore++;
     } else if (questionFour === wrongArray[3]) {
         radioBackground[7].style.backgroundColor = "red";
-    }else{
-        errorMessage.innerHTML="Error message:Q4: please contact support at wiri@hotmail.se"
+    } else {
+        errorMessage.innerHTML = "Error message:Q4: please contact support at wiri@hotmail.se";
     }
 
     if (questionFive === answerArray[4]) {
@@ -167,8 +168,8 @@ function answerScore() {
         currentScore++;
     } else if (questionFive === wrongArray[4]) {
         radioBackground[8].style.backgroundColor = "red";
-    }else{
-        errorMessage.innerHTML="Error message:Q5: please contact support at wiri@hotmail.se"
+    } else {
+        errorMessage.innerHTML = "Error message:Q5: please contact support at wiri@hotmail.se";
     }
 
     if (questionSix === answerArray[5]) {
@@ -176,8 +177,8 @@ function answerScore() {
         currentScore++;
     } else if (questionSix === wrongArray[5]) {
         radioBackground[10].style.backgroundColor = "red";
-    }else{
-        errorMessage.innerHTML="Error message:Q6: please contact support at wiri@hotmail.se"
+    } else {
+        errorMessage.innerHTML = "Error message:Q6: please contact support at wiri@hotmail.se";
     }
 
     if (questionSeven === answerArray[6]) {
@@ -185,8 +186,8 @@ function answerScore() {
         currentScore++;
     } else if (questionSeven === wrongArray[6]) {
         radioBackground[13].style.backgroundColor = "red";
-    }else{
-        errorMessage.innerHTML="Error message:Q7: please contact support at wiri@hotmail.se"
+    } else {
+        errorMessage.innerHTML = "Error message:Q7: please contact support at wiri@hotmail.se";
     }
 
     if (questionEight === answerArray[7]) {
@@ -194,8 +195,8 @@ function answerScore() {
         currentScore++;
     } else if (questionEight === wrongArray[7]) {
         radioBackground[15].style.backgroundColor = "red";
-    }else{
-        errorMessage.innerHTML="Error message:Q8: please contact support at wiri@hotmail.se"
+    } else {
+        errorMessage.innerHTML = "Error message:Q8: please contact support at wiri@hotmail.se";
     }
 
     if (questionNine === answerArray[8]) {
@@ -203,8 +204,8 @@ function answerScore() {
         currentScore++;
     } else if (questionNine === wrongArray[8]) {
         radioBackground[16].style.backgroundColor = "red";
-    }else{
-        errorMessage.innerHTML="Error message:Q9: please contact support at wiri@hotmail.se"
+    } else {
+        errorMessage.innerHTML = "Error message:Q9: please contact support at wiri@hotmail.se";
     }
 
 }
