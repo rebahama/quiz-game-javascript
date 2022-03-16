@@ -17,7 +17,8 @@ body {
 
 }
 
-#intro-heading,.intro-text {
+#intro-heading,
+.intro-text {
     text-align: center;
     padding: 1%;
     background-color: #000000;
@@ -143,8 +144,9 @@ body {
     background-color: #000000;
     font-weight: bold;
 }
+
 /*style the score after clicking submit*/
-#answer-score{
+#answer-score {
     padding-right: 18%;
     padding-left: 18%;
     margin-top: 3%;
@@ -152,83 +154,108 @@ body {
     background-color: #000000;
 }
 
-#image-score{
+#image-score {
     width: 20%;
     border-radius: 10%;
     border: 5px #000000 solid;
 }
+
 /* style error message*/
-#error-message{
+#error-message {
     display: none;
     background-color: #000000;
-    color:#ffff;
+    color: #ffff;
     text-align: center;
     border-radius: 10px;
 }
+
 /*style the page index*/
-.page{
+.page {
     text-align: right;
 }
+
 /* for screen below 830 px*/
 @media screen and (max-width: 830px) {
-#inner-flex-1{
-    min-width: 70%;
-    margin-top: 4%;
-}
-#play-btn{
-    padding: 9px 20px;
-}
-#quiz-form{
-    min-width: 70%;
-    margin-top: 7%;
-    margin-left: 16%;
+    #inner-flex-1 {
+        min-width: 70%;
+        margin-top: 4%;
+    }
 
+    #play-btn {
+        padding: 9px 20px;
+    }
+
+    #quiz-form {
+        min-width: 70%;
+        margin-top: 7%;
+        margin-left: 16%;
+
+    }
+
+    #input-name {
+        width: 35%;
+    }
+
+    #image-score {
+        min-width: 35%;
+    }
+
+    #intro-rules {
+        padding: 0%;
+        position: absolute;
+        bottom: 0;
+    }
 }
-#input-name{
-    width: 35%;
-}
-#image-score{
-    min-width: 35%;
-}
-#intro-rules{
-    padding: 0%;
-    position: absolute;
-    bottom: 0;
-}
-}
+
 /*For screen below 660px*/
-@media screen and (max-width: 660px){
-    #quiz-form{
-        padding:2%;
+@media screen and (max-width: 660px) {
+    #quiz-form {
+        padding: 2%;
         width: 74%;
         margin: auto;
         margin-top: 10%;
     }
-    #btns-container{
+
+    #btns-container {
         padding: 10%;
         display: flex;
         flex-direction: column-reverse;
     }
+
     #image-score {
         min-width: 45%;
     }
-    #input-name{
+
+    #input-name {
         width: 60%;
     }
-    #inner-flex-1{
+
+    #inner-flex-1 {
         flex-direction: column;
     }
-    #answer-score{
+
+    #answer-score {
         font-size: 115%
     }
-    #intro-rules{
+
+    #intro-rules {
         padding: 0%;
         position: absolute;
         bottom: 0;
         font-size: 110%;
     }
-    #inner-flex{
-        height: 330px;
+
+    #inner-flex {
+        height: 300px;
     }
+    /*For screen below 330px*/
+    @media screen and (max-width: 330px) {
+        #inner-flex-1 {
+            height: 280px;
+        }
+        #intro-rules{
+            font-size: 90%;
+        }
+
 
 }
