@@ -112,7 +112,7 @@ function receiveUserName() {
 /**
  *  Takes value from radiobutton in html and compares it to an array and increments score if the score is right.
  */
-answerScore();
+
 
 function answerScore() {
     'use strict';
@@ -248,12 +248,11 @@ function showSubmitArea() {
     document.getElementById('answer-score').innerHTML = showallscore;
     // if statements that displays images in array based on score from increment
     let imageScore = document.getElementById('image-score');
-    if (currentScore < 3) {
+    if (currentScore <=4) {
         imageScore.src = imageArray[2];
-    } else if (currentScore >= 5) {
+    } else if (currentScore === 5) {
         imageScore.src = imageArray[1];
-    }
-    if (currentScore >= 6) {
+    } else{ 
         imageScore.src = imageArray[0];
     }
 
