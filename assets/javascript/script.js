@@ -22,7 +22,6 @@ const wrongArray = ['Donald Trump', '36', 'China', 'Baikal Lake', '1919', 'Jeff 
 const allSection = [firstArea, secondArea, thirdArea];
 //array for holding images
 const imageArray = ['assets/images/gold-medal.jpg', 'assets/images/silver-medal.jpg', 'assets/images/sad-smiley.jpeg'];
-
 /**
  * The next and previous button that shows diffrent section divs in the same html form
  */
@@ -34,17 +33,14 @@ function nextSection() {
     'use strict';
     if (currentSection === firstArea) {
         firstArea.style.display = 'none';
-
         secondArea.style.display = 'block';
         currentSection = secondArea;
     } else if (currentSection === secondArea) {
         secondArea.style.display = 'none';
         thirdArea.style.display = 'block';
-
         currentSection = thirdArea;
     } else if (currentSection === thirdArea) {
         errorMessage.style.display = "block";
-
         errorMessage.innerHTML = "If you are done please click Submit to finish the quiz";
     }
 
@@ -54,8 +50,6 @@ previousButton.addEventListener('click', previousBack);
 function previousBack() {
     'use strict';
     let errorMessage = document.getElementById('error-message');
-
-
     if (currentSection === thirdArea) {
         thirdArea.style.display = "none";
         secondArea.style.display = "block";
@@ -73,7 +67,6 @@ function previousBack() {
 /**
  * Prevents the game from starting if the user leaves the input field empty.
  */
-
 showPlay.addEventListener('click', showArea);
 
 function showArea() {
@@ -93,6 +86,7 @@ function showArea() {
         showFlex.style.display = "none";
 
     }
+
     introHeading.style.display = "none";
     introRules.style.display = "none";
 
@@ -111,7 +105,6 @@ function receiveUserName() {
 /**
  *  Takes value from radiobutton in html and compares it to an array and increments score if the score is right.
  */
-
 function answerScore() {
     'use strict';
     let errorMessage = document.getElementById('error-message');
@@ -142,7 +135,6 @@ function answerScore() {
     } else {
         errorMessage.innerHTML = "Error message:Q2: please contact support at wiri@hotmail.se";
     }
-
     if (questionThree === answerArray[2]) {
         radioBackground[5].style.backgroundColor = "green";
         currentScore++;
@@ -151,7 +143,6 @@ function answerScore() {
     } else {
         errorMessage.innerHTML = "Error message:Q3: please contact support at wiri@hotmail.se";
     }
-
     if (questionFour === answerArray[3]) {
         radioBackground[6].style.backgroundColor = "green";
         currentScore++;
@@ -160,7 +151,6 @@ function answerScore() {
     } else {
         errorMessage.innerHTML = "Error message:Q4: please contact support at wiri@hotmail.se";
     }
-
     if (questionFive === answerArray[4]) {
         radioBackground[9].style.backgroundColor = "green";
         currentScore++;
@@ -169,7 +159,6 @@ function answerScore() {
     } else {
         errorMessage.innerHTML = "Error message:Q5: please contact support at wiri@hotmail.se";
     }
-
     if (questionSix === answerArray[5]) {
         radioBackground[11].style.backgroundColor = "green";
         currentScore++;
@@ -178,7 +167,6 @@ function answerScore() {
     } else {
         errorMessage.innerHTML = "Error message:Q6: please contact support at wiri@hotmail.se";
     }
-
     if (questionSeven === answerArray[6]) {
         radioBackground[12].style.backgroundColor = "green";
         currentScore++;
@@ -187,7 +175,6 @@ function answerScore() {
     } else {
         errorMessage.innerHTML = "Error message:Q7: please contact support at wiri@hotmail.se";
     }
-
     if (questionEight === answerArray[7]) {
         radioBackground[14].style.backgroundColor = "green";
         currentScore++;
@@ -196,7 +183,6 @@ function answerScore() {
     } else {
         errorMessage.innerHTML = "Error message:Q8: please contact support at wiri@hotmail.se";
     }
-
     if (questionNine === answerArray[8]) {
         radioBackground[17].style.backgroundColor = "green";
         currentScore++;
@@ -207,7 +193,6 @@ function answerScore() {
     }
 
 }
-
 /**
  *  After clicking submit button hides the button inside the quizform
  */

@@ -10,7 +10,7 @@ Quizit is a very simple and basic question and answer application. As soon you g
 * I would like to know what questions that I answered were right and what questions were wrong.
 
 
-# Features
+# Features and functionality
 
 ## Front page
 * The heading and front page. This page is the first thing that the user will see when visiting the quiz, it includes a inputfield to use for the user, a button that starts the quiz and on the bottom a short description on how to play the quiz. ![Frontpage](docs/frontpage-1.png)
@@ -75,11 +75,13 @@ The deployment of the site was created with:
 ## Testing
 * The site was tested with three diffrent browsers, Brave, Google chrome and Microsoft Edge.
 
-* I confirmed that the error message was displayed when the user clicks on previous button on the first page and next button on the last page.
+* To start the game, write a name in the username field and click on "click to play". 
 
-* I confirmed that the user must write a username before being able to start the quiz.
+* To test the displaying of message above the quiz form, click on the previous button when you are on page one after clicking play.
 
-* I confirmed that the images are diffrent based on the score that the user recieves after clicking submit.
+* To view the first image you mest get a score under 5,to get the second image you must get a score of 5 and to get the last image you must get a score above 5.
+
+* To view right or wrong answers that displays in colour of red for wrong and right for green, click submit after you have answered all the questions.
 
 # Supported screens 
 I used this site [Am I responsiv?](http://ami.responsivedesign.is/#) to test the quiz on diffrent screens. In chrome devtools I also tested diffrent screen sizes such as:
@@ -114,7 +116,7 @@ Only error that I got was that I forgot to include an alt in my img tag.
 
  Following metrics was returned from the Javascirpt file:
  * There are 8 functions in this file.
- * Largest function has 45 statements in it, while the median is 7.5.
+ * Largest function has 55 statements in it, while the median is 7.5.
  * The most complex function has a cyclomatic complexity value of 19 while the median is 3.
 
 
@@ -145,7 +147,7 @@ Website link is here: [QuizIT](https://rebahama.github.io/quiz-game-javascript/)
 
 # Credits
 ## Content
-* To get started with collecting the values from radibuttons form I got help from this video: [Get started](https://www.youtube.com/watch?v=C7NsIRhoWuE)
+* To get started with collecting the values from the radiobuttons form I got help from this video: [Get started](https://www.youtube.com/watch?v=C7NsIRhoWuE)
 
 * Fonts are from Google: [Google fonts](https://fonts.google.com/)
 
